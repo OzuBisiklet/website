@@ -1,0 +1,4884 @@
+<html lang="eng"><head>
+    <!-- Resim URL'leri Yapılandırması -->
+    <script>
+        // Ana Sayfa Biz Kimiz Resimleri
+        const SLIDER_RESIMLERI = [
+            "1shCONXYuqnzhTbm2dIEQ6C3109EuXNXk",//1
+            "13pR0POQlv6Vh5GavCUE6rdRPT60TrTs6",//2
+            "1zo7vCNY7OTtNu4HmwFqtQpLVNd5GVTnp",//3
+            "1zDcafuIGXIRYhQi8mDZPUhnpvxfaCXNR",//4
+            "1180PeM_g-KMEuk_LXwmw-8y5PZESvzDk",//5
+            "1rilI0sp847CjUIQGMHg_aKa0BdqEyxvQ",//6
+            "1vrXOJhh-KSD62JWphzK1Xy_70yU9Mtmo",//7
+            "18kRg-80sVQt9vMB5x3LGktmuLkY8-_eV"//8
+        ];
+
+        //Pedallaya Pedallaya Resimleri
+        const PEDALLAYA_PEDALLAYA = [
+            "1jv2cawV6CpbhAmCZY2ps8KBxLSHO5BFQ",//1
+            "1lRxkgEx7jAeq3AXthjbaKvBtY15t-mQS",//2
+            "1svz_DzhdHRMAI56oZgt1WGMQfh3Ab6lf",//3
+            "1BlplJ-RmFgqBgtw3pFxnmZJ7wqkzOQkI",//4
+            "1z7FqK2hOYwkn5tY6iVHvz5FH3Ocpkndz",//5
+            "11kjFfaMKhNSndAmo6xKiczE4diKZscw6"//6
+        ];
+
+        // Tur Slaytları
+        const GOOGLE_DRIVE_LINKLERI = {
+            buyukada: {
+                isim: "Buyukada Tour",
+                aciklama: "How about a pleasant tour between the historical pavilions and pine forests in Buyukada, the largest of the islands? We sweat a little while climbing Aya Yorgi, but the landscape is definitely worth it! Who doesn't want to ride a bike in this breathtaking place with its great nature and exquisite landscapes! 🚲🌲 ", 
+                resimler: [
+                    "1Jd7rjjSWKwJ62CuQhX6YSbwcKOooi6TU",
+                    "1M8IUmGvfG5KpGh8CQElhsdK5iCvesjzN",
+                    "18MdKDhZsgHUr6fq0rmm218x6NtJBl2Hp",
+                    "1PvUs8v3bzTEMd6Bw5YuyDh6zSac21MmJ"
+                ]
+            },
+            heybeliada: {
+                isim: "Heybeliada Tour",
+                aciklama: "Are you ready to pedal in the unique view of Heybeliada, on the routes where nature and history meet? He visits the Seminary School while moving on the pine -scented roads, We enjoy the exquisite landscapes of Heybeliada. ⛰️🌅 ",
+                resimler: [
+                    "11-xY8WvKHp71c5OBXv7ecJDXDUrIYrl8",
+                    "1Riq_73mNtTUwyLaWQE19RweIog801yxA",
+                    "1QRudj-hNkYs0TT1WNAqWIBF2fbDEbjjO",
+                    "1VFGUuOIgVQHrc2RTRqKW8RxKnYQDu649"
+                ]
+            },
+            bostanci: {
+                isim: "Bostanci-Maltepe Coastline Tour",
+                aciklama: "Who doesn't want a spacious driving experience by the sea? Bostanci is pedaling with seagulls on the coastline extending from Bostanci to Maltepe, We take pleasant breaks between each other and breathe with great sea air. 🌊☕ ",
+                resimler: [
+                    "18cnpalQtgAnaedjmAHW3s6aVLX0qyUgH",
+                    "1f3zJOFnZC5EmsjM-1qtMc1qOC-42De5E",
+                    "1F8iC0GHGaMtbK5DcSv0F3TRZao6nWli0",
+                    "147Wvu7CgzcPtyY1P1T1Qs9yP9Qp72epB",
+                    "1Lonm4gcCmSDVrBTFes3tUxVYGdsDGFKU"
+                ]
+            },
+            anadolukavagi: {
+                isim: "Anadolu Kavagi Tour",
+                aciklama: "How about a pleasant journey to the north of the Bosphorus? Along the beach, we pedal in the famous sea mood and discover the throat with our bikes. On this beautiful route, we accumulate memories that we will not forget. 🚴‍♂️ ",
+                resimler: [
+                    "16DvBoyiyCUPM4EB52VnnBiZD-c1Rvn1m",
+                    "1kvY1nQkglF4J2QpBeUjk9GIrf7HJqPDM",
+                    "1PwvWRrPEnwwGCrygUDhmdxPLJFxxLWUX",
+                    "1b26Mx2FTxkIwoi_5MlWdI1r6hrkQwWI8"
+                ]
+            },
+            beykoz: {
+                isim: "Beykoz Forest Trail Tour",
+                aciklama: "How would you like to move away from the noise of the city and travel to the heart of nature? In the lush forests of Beykoz, we are pedaling with bird sounds. Even though we have a little difficulty in the trails, we chat at breaks and collect our energy. A nice adventure with nature! 🌳💚 ",
+                resimler: [
+                    "1DfD-IakQU9pRRtHTJdxKJQdFbW4wHIut",
+                    "1hfg8UAQ_MhNITvIkRKvZxOQRm_-PhKaT",
+                    "1QUhOBXfMiTAn77thcJm_BlKnejOvAImf",
+                    "1OHqG-kcs2To_zqdmu-jXTvOZMPguZtOi",
+                    "1H02Sbw-FMV-RUsNd8W15KKKBhO67XCkr",
+                    "1syIdeLkbVwPMs1GxfkRUUjdkCqmkBrNL"
+                ]
+            },
+            rumelikavagi: {
+                isim: "Rumeli Kavagi Tour",
+                aciklama: "An unforgettable tour with the unique view of the Bosphorus! While we are pedaling with historical mansions, bridges and sea views, we take breaks at the most beautiful photo points. We discover the European side of the Bosphorus together and collect plenty of moments. 🌅🌉 ",
+                resimler: [
+                    "1cHhMdcakyEq5E5EteubxEdLzUgAtdJ_7",
+                    "1GmxbeuwopvHdS0gXzg6dZJPiUnGoLDgC",
+                    "1NIrwgGygTpf4DmhX2jioPk2-1HGQtLe5",
+                    "1ifDbU-rOEgX-VwgzBdz_PavnxTM0ghLM"
+                ]
+            },
+            canakkale: {
+                isim: "Canakkale Tour",
+                aciklama: "In this tour, which is both emotional and fun, we visit the martyrs and turn our pedals in the exquisite atmosphere of Canakkale. We take lots of photos and accumulate unforgettable memories together. 🇹🇷✨ ",
+                resimler: [
+                    "1ihRqVKTrNJJ98gxoFyCC1n1zMG72--qd",
+                    "1GYr6ujwsQUGAUCCsLFrG9s0mjA4WhnQH",
+                    "1ABmQDEkdzJwdXOhqmdYE4yqFsECDK2pW",
+                    "1VS3jDK7i25rNswKmF1z5PpFtK3K1GLyD"
+                ]
+            },
+            bursa: {
+                isim: "Bursa Tour",
+                aciklama: "A journey to the rich culture of Bursa!In this tour, we both visit the cultural fields and pamper ourselves with the exquisite tastes of Bursa.Of course we don't forget to pedal while doing these! 🚴‍♂️💚 ",
+                resimler: [
+                    "1E8CdZmC85ZCc7-9zBv-oK8y_wXHbNtas",
+                    "1qZXedODEn7RlEe6EyrnEo4dovZ6y4GEi",
+                    "18wNnfxytvloHu4VDh3fZUJkaTBGvE_tu",
+                    "1FiVjQNYIUX2vymlQp9L9NyIowKp0C134",
+                    "1TBPTXOA4uinU_ZjGpdxeDmvQjbHMh04c",
+                    "1D4jzQ5VPmjgSt39hkwWqXVK6RBuRozQt"
+                ]
+            },
+            konya: {
+                isim: "Konya Tour",
+                aciklama: "A little culture, a little history, and plenty of pleasure! In this tour, we will visit Konya and its rich culture and turn our pedals in the great nature of Konya. No memorable memories do not return without saving! 🚐🌟 ",
+                resimler: [
+                    "1Ck0mAkEzc4PBPTV1ahiKRj3fVufPLsdj",
+                    "1wgclbDiPb3eG1clUhLeYgYsB1DFv4nQW",
+                    "1RHO-Ztk06L1y5tRrbC1iIZE2-8oymF8R",
+                    "1GXkLkzWUo6FGVCQaUDB0n865CjBs2Vih"
+                ]
+            }
+        };
+
+        // Galeri Resimleri
+        const GALERI_RESIMLERI = {
+            "2024-2025": [
+                {
+                    id: "1fpJXdRN9d9pq9Al1Ee8HQe1cRFLeV-hB",
+                    baslik: "Bursa Tour"
+                },
+                {
+                    id: "1L7OzytTsqI0CtHOzOHI_loYlYWD4Rdnx",
+                    baslik: "Bostanci Tour"
+                },
+                {
+                    id: "18SaaCwLSkvvI86sahSubJQRZtOLxlePQ",
+                    baslik: "Canakkale Tour"
+                }
+            ],
+            "2023-2024": [
+                {
+                    id: "1_-HylFo_gpre-xWhuuNk-cLqnrC__m1J",
+                    baslik: "Buyukada Tour"
+                },
+                {
+                    id: "19_7D7CKdPUWkNVOd2IOivKOHxCXOX7n-",
+                    baslik: "Bogaz Tour"
+                },
+                {
+                    id: "1NF1I2-G8eVC6ZjiCnDqKfvsxh9ko63jc",
+                    baslik: "Heybeliada Tour"
+                }
+            ],
+            "2022-2023": [
+                {
+                    id: "1DD66hSa2Bn-Df-YbzXkFifiu7UqsPCHW",
+                    baslik: "Buyukada Tour"
+                },
+                {
+                    id: "1KQniy8Vhp3oh04FhejrwHO9cxYaQvROO",
+                    baslik: "Heybeliada Tour"
+                }
+            ],
+            "2021-2022": [
+                {
+                    id: "1VEk9v2lKT38gaJMDXqK58Gv5LMmfti5p",
+                    baslik: "Bogaz Tour"
+                }
+            ]
+        };
+
+        // Galeri Ekstra Resimleri
+        const GALERI_EKSTRA_RESIMLERI = {
+            "2024-2025": {
+                "buyukada": [//
+                    "1VmlMXffr7BOsDh2uD-isE9zQ3icdz4gW",
+                    "1cts9xCBa4FKOrOW6KWzGuEO0Sff6W0sm"
+                ],
+                "bostanci": [//
+                    "18cnpalQtgAnaedjmAHW3s6aVLX0qyUgH",
+                    "1f3zJOFnZC5EmsjM-1qtMc1qOC-42De5E",
+                    "1F8iC0GHGaMtbK5DcSv0F3TRZao6nWli0",
+                    "147Wvu7CgzcPtyY1P1T1Qs9yP9Qp72epB",
+                    "1Lonm4gcCmSDVrBTFes3tUxVYGdsDGFKU",
+                    "1d7W7Gmg576mgy0udAZWO7Vetc0vmBzc9"
+                ],
+                "rumelikavagi": [//
+                    "1cHhMdcakyEq5E5EteubxEdLzUgAtdJ_7",
+                    "1GmxbeuwopvHdS0gXzg6dZJPiUnGoLDgC",
+                    "1NIrwgGygTpf4DmhX2jioPk2-1HGQtLe5",
+                    "1ifDbU-rOEgX-VwgzBdz_PavnxTM0ghLM"
+                ],
+                "canakkale": [//
+                    "1ihRqVKTrNJJ98gxoFyCC1n1zMG72--qd",
+                    "1GYr6ujwsQUGAUCCsLFrG9s0mjA4WhnQH",
+                    "1ABmQDEkdzJwdXOhqmdYE4yqFsECDK2pW",
+                    "1VS3jDK7i25rNswKmF1z5PpFtK3K1GLyD",
+                    "1NSkAW4nMosUNT-XtbncC-S-w6YV49PlK",
+                    "1B6LPZ2PubfWBl8Fq008Wn1EPDo_8Lobp",
+                    "1f__8E9TQNlOajmVwYPrUh4dhS4r6hjyn",
+                    "1i20mkNSo2TQkbSWBfuYU4prXjPLBl4HI",
+                    "1jF1SzVMmy7NnsSea-_fZn3Hrgy5xxoQD",
+                    "10lPqmlu1T49OvHcW-gRptf0jHQaYoBOH",
+                    "1ceJHCHBTRtfXuoK-QmsCWNqQnewEg2X8",
+                    "1H83PDijihCF9iHohINzIKazJHvfooI4g"
+                ],
+                "bursa": [//
+                    "1E8CdZmC85ZCc7-9zBv-oK8y_wXHbNtas",
+                    "1qZXedODEn7RlEe6EyrnEo4dovZ6y4GEi",
+                    "18wNnfxytvloHu4VDh3fZUJkaTBGvE_tu",
+                    "1FiVjQNYIUX2vymlQp9L9NyIowKp0C134",
+                    "1TBPTXOA4uinU_ZjGpdxeDmvQjbHMh04c",
+                    "1D4jzQ5VPmjgSt39hkwWqXVK6RBuRozQt",
+                    "1XKU7a22JZSCgbyxra0qd5nQCH6ed4gdI"
+                ],
+                "konya": [//
+                    "1Ck0mAkEzc4PBPTV1ahiKRj3fVufPLsdj",
+                    "1wgclbDiPb3eG1clUhLeYgYsB1DFv4nQW",
+                    "1RHO-Ztk06L1y5tRrbC1iIZE2-8oymF8R",
+                    "1GXkLkzWUo6FGVCQaUDB0n865CjBs2Vih"
+                ]
+            },
+            "2023-2024": {
+                "bogaz": [//
+                    "13yKn7oYrUtJEwMSd9ySUbmY-h16ABOTO",
+                    "1jrIjG78FS6LOIomUZl09VWJT9kj0g_YG",
+                    "1rVAY5Sn69RvsXYFWPvH27gNGNKT4uw6c",
+                    "10wklUwgNXUuJ91cJbmHrdctjdyu2iFeD",
+                    "1t3uBiSMtINKaqy-dxk_3Dvgh8y0Ac50B"
+                ],
+                "heybeliada": [//
+                    "11-xY8WvKHp71c5OBXv7ecJDXDUrIYrl8",
+                    "1Riq_73mNtTUwyLaWQE19RweIog801yxA",
+                    "1QRudj-hNkYs0TT1WNAqWIBF2fbDEbjjO",
+                    "1VFGUuOIgVQHrc2RTRqKW8RxKnYQDu649",
+                    "1gxcNyt5zE08lC0uTp46lgWgbfVojuRBx",
+                    "1dSu5voiLqv8pzCRhr5BUGPW5fAKY-bpw"
+                ],
+                "buyukada": [//
+                    "1Jd7rjjSWKwJ62CuQhX6YSbwcKOooi6TU",
+                    "1M8IUmGvfG5KpGh8CQElhsdK5iCvesjzN",
+                    "18MdKDhZsgHUr6fq0rmm218x6NtJBl2Hp",
+                    "1PvUs8v3bzTEMd6Bw5YuyDh6zSac21MmJ",
+                    "1s8Xyrz0uC6RwpC4okpYFUxIoCSeNEbVJ",
+                    "1vLJ-Zk3ZnE5PZiCfrzESNfkXnrQdc2hl",
+                    "1Wtw0F86t4MwNI3XhpWItXrv2zhH-Ezag",
+                    "1ZLWGA5-m9eOksc1EwEnUHw3OeaHl1KyR",
+                    "1Tbqq99HZEhGHyGgYv7MAsBQyQ2UjVl4z",
+                    "1ncjIzFpl6jl6R1-InxZHHHhmmzb74AUM",
+                    "1yF6z1duWflHhI47x9hw3NF_VM4fDSEDh",
+                    "1JKIDiEvWGVmszm9YrHVpkozmGrZi9HI-"
+                ],
+                "bostanci": [//
+                    "1dCv_-syfuhAPUTw_F5xXchAM9DtZb9ys",
+                    "1xM7S2_8bLyWPXcm8r2wFFlh-Zmf7oIzQ",
+                    "1cGykXHi6IXbrLTsgsMlhjibKyWzt5hZh",
+                    "1zkVU0V4BDVbZVwQCuZaiNMCASL6Bg26G"
+                ]
+            },
+            "2022-2023": {
+                "buyukada": [
+                    "1DJngjr8cPZFTlfKbiU_kBXxzLpNgfIA4",
+                    "1BooPpzvnvplyep_UmoMlGgaOkR00PkSb",
+                    "1W-H8u6DpkZt6hNQhVSGw3J7oCwAZWDHf",
+                    "15oiFnGtRdyZrAgJ-Lroi-D00Z3zbi5Ff",
+                    "1-a6JhNONe-p3bVWJIuToBSq7PnJRQUyj",
+                    "1Be6a0A-5GrqT1xGg5QQXCP339ElPIUWp",
+                    "1A5aXORhLdzKv-YMiRoFRhvzlc_RIx-bp",
+                    "1OXzWVPBEh7edVqnjBD1FmqN8OSHUzPSr",
+                    "1wfUDBjs7URcuHMyw0QbREUJt6xgiMa4P",
+                    "160QFBG7NPVHk_SYT3JBIs--L1XM7OHeO"
+                ],
+                "heybeliada": [
+                    "12NB2bYKKCUt6H3G_70vlpe985OP6QWc4",
+                    "1ChMJ7-W2hffa9rBS6YelXuiEFek8fhiw",
+                    "15SR4D6yEUaT7-sh7ssl6EyPkb_TIEIU2"
+                ]
+            },
+            "2021-2022": {
+                "buyukada": [
+                    "18KyXXAbP9_IqNi1j97Xten0twaJgG-mJ",
+                    "1_rW-nN299Nwq37p6J-SJONB-hQD7bI09",
+                    "1lrvBukPc6NSfZLfFm5ZZQyV6Edole_Fu",
+                    "1mTtXBiIFWpgUxiOpHMgaK4b8YbUGdz0g"
+                ],
+                "heybeliada": [
+                    "1pBvbgM9st3LvVPNVYqaOC1CvtlwNSmwQ",
+                    "1_VCc8nsNpDmapRGSY1XU04X4CYrH2Xdq",
+                    "1BuCF3lKJN2N0k_yNfIL6HrrJqLGXqiZ4",
+                    "1cwLhtRM5maIfRDrAFMvun5pA1n97ZfOP"
+                ],
+                "bogaz": [
+                    "1JVAZJc9exVd4L5-V5GnpC3xvSGErg4qZ",
+                    "1IFb9Cen3LenOH5vR8DGfIbee9qRm46vw",
+                    "1lUHE4jxoQeKXGi3C36Epiv-00mGmYDK6",
+                    "1QXCETPnCtY-pPhmqzflMpe2bo6MR1jWh"
+                ]
+            }
+        };
+
+        const kampus_disi_epmty = 0;
+        const kampus_ici_empty = 0;
+
+        // Etkinlikler Afişleri
+        const ETKINLIKLER = {
+            kampusDisi: [
+                {
+                    resimId: "1Xcet9yMuh9yMwIt6v9KHt9YJysKc2mxb",
+                    baslik: "Konya Tour",
+                    tarih: "1-2 May 2025",
+                    kayitAcik: true,
+                    kayitSon: "31 Nisan 2025",
+                    kayitLink: "https://forms.gle/gkna2qKTqjninPan8"
+                }
+            ],
+            kampusIci: [
+                {
+                    resimId: "1QKZepk9KqkEAKAdRwBHyiw8do-mfYzUU",
+                    baslik: "Heybeliada Tour",
+                    tarih: "26 April 2025",
+                    kayitAcik: true,
+                    kayitSon: "24 Nisan 2025",
+                    kayitLink: "https://forms.gle/QiAnMKosZuGmursA8"
+                }
+            ]
+        };
+
+        if (kampus_disi_epmty === 1) {
+            ETKINLIKLER.kampusDisi = [ETKINLIKLER.empty];
+        }
+        if (kampus_ici_empty === 1) {
+            ETKINLIKLER.kampusIci = [ETKINLIKLER.empty];
+        }   
+        // Üye Ol Bölümü Resmi ve Linki
+        const UYE_OL_RESIM = "uye_ol.gif";
+        const UYE_OL_LINK = "https://forms.gle/FGruUip4VD4mP3sGA";
+
+        // Google Drive'dan resim URL'si oluşturan fonksiyon
+        function getGoogleDriveImageUrl(imageId) {
+            return `https://drive.google.com/thumbnail?id=${imageId}&sz=w1000`;
+        }
+
+        // Sayfa yüklendiğinde resimleri yükle
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Tur slaytlarını dinamik olarak oluştur
+            const tourSlider = document.querySelector('.tour-slider');
+            const tourContent = document.querySelector('.tour-content');
+            
+            // Önce mevcut içerikleri temizle
+            tourSlider.innerHTML = '';
+            tourContent.innerHTML = '';
+            
+            // Her tur için slaytları ve içerikleri ekle
+            let isFirstTour = true;
+            for (const [tur, data] of Object.entries(GOOGLE_DRIVE_LINKLERI)) {
+                try {
+                    console.log(`${tur} turu için resimler yükleniyor...`);
+                    
+                    // Tur resimlerini ekle
+                    data.resimler.forEach((resimId, index) => {
+                        const resimUrl = getGoogleDriveImageUrl(resimId);
+                        const activeClass = isFirstTour && index === 0 ? 'active' : '';
+                        tourSlider.innerHTML += `
+                            <div class="tour-slide ${activeClass} ${tur}" style="background-image: url('${resimUrl}')"></div>
+                        `;
+                    });
+                    
+                    // Tur açıklamasını ekle
+                    const activeClass = isFirstTour ? 'active' : '';
+                    tourContent.innerHTML += `
+                        <div class="tour-description ${activeClass}">
+                            <div class="tour-header">
+                                <button class="tour-nav-btn prev-tour">❮</button>
+                                <h3>${data.isim}</h3>
+                                <button class="tour-nav-btn next-tour">❯</button>
+                            </div>
+                            <p>${data.aciklama}</p>
+                        </div>
+                    `;
+                    
+                    if (isFirstTour) {
+                        isFirstTour = false;
+                    }
+                } catch (hata) {
+                    console.error(`${tur} resimleri yüklenirken hata oluştu:`, hata);
+                }
+            }
+            
+            // BU KISIM ÖNEMLİ: Tur navigasyon butonlarını bağla
+            console.log('Tur navigasyon butonları bağlanıyor...');
+            setTimeout(() => {
+                const prevTourButtons = document.querySelectorAll('.prev-tour');
+                const nextTourButtons = document.querySelectorAll('.next-tour');
+                
+                console.log(`Bulunan butonlar: Prev: ${prevTourButtons.length}, Next: ${nextTourButtons.length}`);
+                
+                prevTourButtons.forEach(button => {
+                    button.onclick = function() {
+                        showTourContent(currentTourSlide - 1);
+                    };
+                });
+                
+                nextTourButtons.forEach(button => {
+                    button.onclick = function() {
+                        showTourContent(currentTourSlide + 1);
+                    };
+                });
+            }, 500); // DOM'un tam yüklenmesini beklemek için kısa bir gecikme
+            
+            // Etkinlikleri dinamik olarak yükle
+            loadEvents();
+            
+            // Galeri resimlerini yükle
+            console.log('Galeri resimleri yükleniyor...');
+            
+            // Her yıl için resimleri yükle
+            Object.entries(GALERI_RESIMLERI).forEach(([yil, resimler]) => {
+                console.log(`${yil} yılı resimleri yükleniyor:`, resimler);
+                
+                resimler.forEach((resim, index) => {
+                    const imgId = `gallery-img-${yil}-${index + 1}`;
+                    const titleId = `gallery-title-${yil}-${index + 1}`;
+                    const imgElement = document.getElementById(imgId);
+                    const titleElement = document.getElementById(titleId);
+                    
+                    if (imgElement && titleElement) {
+                        imgElement.src = getGoogleDriveImageUrl(resim.id);
+                        titleElement.textContent = resim.baslik;
+                    }
+                });
+            });
+            
+            // Üye ol butonunu güncelle
+            const uyeOlBtn = document.querySelector('.join-btn');
+            if (uyeOlBtn) {
+                uyeOlBtn.onclick = function() {
+                    window.open(UYE_OL_LINK, '_blank');
+                };
+            }
+            
+            // Mobil menü için
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            
+            if (mobileMenuToggle && mobileNav) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mobileNav.classList.toggle('active');
+                    document.body.classList.toggle('no-scroll');
+                });
+                
+                // Mobil menüdeki linklere tıklandığında menüyü kapat
+                const mobileNavLinks = mobileNav.querySelectorAll('a');
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenuToggle.classList.remove('active');
+                        mobileNav.classList.remove('active');
+                        document.body.classList.remove('no-scroll');
+                    });
+                });
+            }
+            
+            // Etkinlik resimlerini güncelle
+            const kampusDisiFoto = document.querySelector('.event-section:first-child .event-poster img');
+            const kampusIciFoto = document.querySelector('.event-section:last-child .event-poster img');
+            
+            if (kampusDisiFoto && ETKINLIKLER.kampusDisi.length > 0) {
+                kampusDisiFoto.src = getGoogleDriveImageUrl(ETKINLIKLER.kampusDisi[0].resimId);
+                const baslik = kampusDisiFoto.closest('.event-poster').querySelector('h4');
+                const tarih = kampusDisiFoto.closest('.event-poster').querySelector('p');
+                if (baslik) baslik.textContent = ETKINLIKLER.kampusDisi[0].baslik;
+                if (tarih) tarih.textContent = ETKINLIKLER.kampusDisi[0].tarih;
+            }
+            
+            if (kampusIciFoto && ETKINLIKLER.kampusIci.length > 0) {
+                kampusIciFoto.src = getGoogleDriveImageUrl(ETKINLIKLER.kampusIci[0].resimId);
+                const baslik = kampusIciFoto.closest('.event-poster').querySelector('h4');
+                const tarih = kampusIciFoto.closest('.event-poster').querySelector('p');
+                if (baslik) baslik.textContent = ETKINLIKLER.kampusIci[0].baslik;
+                if (tarih) tarih.textContent = ETKINLIKLER.kampusIci[0].tarih;
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Slider resimlerini yükle
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((slide, index) => {
+                const imageUrl = getGoogleDriveImageUrl(SLIDER_RESIMLERI[index]);
+                slide.style.backgroundImage = `url('${imageUrl}')`;
+                console.log(`Slider resmi ${index + 1} yükleniyor:`, imageUrl);
+            });
+
+            // Etkinlik resimlerini güncelle
+            const kampusDisiFoto = document.querySelector('.event-section:first-child .event-poster img');
+            const kampusIciFoto = document.querySelector('.event-section:last-child .event-poster img');
+            
+            if (kampusDisiFoto && ETKINLIKLER.kampusDisi.length > 0) {
+                kampusDisiFoto.src = getGoogleDriveImageUrl(ETKINLIKLER.kampusDisi[0].resimId);
+                const baslik = kampusDisiFoto.closest('.event-poster').querySelector('h4');
+                const tarih = kampusDisiFoto.closest('.event-poster').querySelector('p');
+                if (baslik) baslik.textContent = ETKINLIKLER.kampusDisi[0].baslik;
+                if (tarih) tarih.textContent = ETKINLIKLER.kampusDisi[0].tarih;
+            }
+            
+            if (kampusIciFoto && ETKINLIKLER.kampusIci.length > 0) {
+                kampusIciFoto.src = getGoogleDriveImageUrl(ETKINLIKLER.kampusIci[0].resimId);
+                const baslik = kampusIciFoto.closest('.event-poster').querySelector('h4');
+                const tarih = kampusIciFoto.closest('.event-poster').querySelector('p');
+                if (baslik) baslik.textContent = ETKINLIKLER.kampusIci[0].baslik;
+                if (tarih) tarih.textContent = ETKINLIKLER.kampusIci[0].tarih;
+            }
+            
+            // Mobil menü için
+            const menuBtn = document.querySelector('.menu-btn');
+            const mobileNav = document.querySelector('.mobile-nav');
+            
+            if (menuBtn && mobileNav) {
+                menuBtn.addEventListener('click', function() {
+                    mobileNav.classList.toggle('active');
+                    document.body.classList.toggle('no-scroll');
+                });
+                
+                // Mobil menüdeki linklere tıklandığında menüyü kapat
+                const mobileNavLinks = mobileNav.querySelectorAll('a');
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileNav.classList.remove('active');
+                        document.body.classList.remove('no-scroll');
+                    });
+                });
+            }
+        });
+    </script>
+    <!-- Google Drive Linkleri Yapılandırması Bitiş -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özyeğin Üniversitesi Bisiklet Kulübü</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        body.no-scroll {
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4rem;
+        }
+        header {
+            padding: 0.1rem 0;
+            background-color: #EDF4F2;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4rem;
+        }
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 0rem;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+        }
+        .club-name {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2d3748;
+            line-height: 1.4;
+            text-align: center;
+        }
+        .club-name span {
+            font-size: 1rem;
+            color: #2d3748;
+        }
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+        .nav-item {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        .nav-item:hover {
+            color: #2d3748;
+        }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #00a884;
+            transform: scaleX(0);
+            transition: transform 0.2s ease;
+        }
+        .nav-item:hover::after {
+            transform: scaleX(1);
+        }
+        /* Aktif menü öğesi için alt çizgi */
+        .nav-item.active::after {
+            transform: scaleX(1);
+        }
+        
+        @media (max-width: 768px) {
+            /* Mobil görünümde aktif bölüm çizgisini gizle */
+            .nav-item::after {
+                display: none;
+            }
+            
+            .nav-item.active::after {
+                display: none;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+        }
+        .auth-buttons {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        .login-btn {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.6rem 1.2rem;
+            transition: color 0.2s ease;
+        }
+        .signup-btn {
+            background-color: #00a884;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        .signup-btn:hover {
+            background-color: #008f6f;
+            transform: translateY(-1px);
+        }
+        .about-btn {
+            background-color: #00a884;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        .about-btn:hover {
+            background-color: #008f6f;
+            transform: translateY(-1px);
+        }
+        main {
+            margin-top: 0;
+            padding: 2rem 0;
+        }
+        @media (max-width: 1200px) {
+            .container, .header-content {
+                padding: 0 2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            .container, .header-content {
+                padding: 0 1.5rem;
+            }
+            .lang-link-header {
+                display: none;
+            }
+            .lang-btn-header {
+                display: none;
+            }
+            .logo {
+                width: 55px;
+                height: 55px;
+            }
+            .club-name {
+                font-size: 1.1rem;
+            }
+            .club-name span {
+                font-size: 1.1rem;
+            }
+            /* Logo ve kulüp adını yakınlaştırma */
+            .logo-section {
+                gap: 0.3rem; /* 0.5rem'den 0.3rem'e düşürerek daha yakınlaştırıyoruz */
+            }
+        }
+
+        /* Slider Styles */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+            margin-top: 75px;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .slide-content {
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+            transition: all 0.8s ease;
+        }
+
+        .slide-title {
+            color: white;
+            font-size: 4rem;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+            transition: all 0.8s ease;
+        }
+
+        .discover-btn {
+            background-color: #00a884;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        .discover-btn:hover {
+            background-color: #008f6f;
+            transform: translateY(-3px);
+        }
+
+        .content-visible .discover-btn {
+            transform: translateY(150px);
+        }
+
+        .about-content {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 100%;
+            color: white;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .about-content p {
+            font-size: 1.5rem;
+            line-height: 1.7;
+            margin: 0;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            letter-spacing: 0.02em;
+        }
+
+        .content-visible .about-content {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .content-visible .slide-title {
+            transform: translateY(-200px);
+            font-size: 3.5rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .about-content p {
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+            .content-visible .discover-btn {
+                transform: translateY(120px);
+            }
+            /* Bisiklet animasyonunu responsive'de hızlandırma ve düzenleme */
+            .bike {
+                animation: responsive-bikemove 9s linear infinite !important; /* Toplam süre: yaklaşık 3sn hareket + 3sn duraklama *1.5 */
+            }
+            /* Bisikletçileri birbirine yakın konumlandırma */
+            .bike:nth-child(1) { animation-delay: 0s !important; }
+            .bike:nth-child(2) { animation-delay: 0.75s !important; }
+            .bike:nth-child(3) { animation-delay: 1.5s !important; }
+            .bike:nth-child(4) { animation-delay: 2.25s !important; }
+            /* İkinci grup - 3sn sonra başlasın */
+            .bike:nth-child(5) { animation-delay: 6s !important; }
+            .bike:nth-child(6) { animation-delay: 6.75s !important; }
+            .bike:nth-child(7) { animation-delay: 7.5s !important; }
+            .bike:nth-child(8) { animation-delay: 8.25s !important; }
+            
+            /* Responsive için özel keyframes - gruplar arası 3sn duraklama */
+            @keyframes responsive-bikemove {
+                0% {
+                    left: 100%;
+                }
+                /* İlk %33'lük sürede bisikletler hızlı geçsin */
+                33% {
+                    left: -50px;
+                }
+                /* Geri kalan %67'lik sürede beklesin (boşluk) */
+                100% {
+                    left: -50px;
+                }
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide-title {
+                font-size: 3rem;
+            }
+            .content-visible .slide-title {
+                font-size: 2.5rem;
+            }
+            .about-content p {
+                font-size: 1rem;
+                line-height: 1.4;
+            }
+            .content-visible .discover-btn {
+                transform: translateY(100px);
+            }
+            /* Daha küçük ekranlarda bisiklet animasyonunu ayarlama */
+            .bike {
+                animation: responsive-bikemove 8s linear infinite !important; /* Daha hızlı */
+            }
+            /* Bisikletçileri daha yakın aralıklarla ayarlama */
+            /* İlk grup */
+            .bike:nth-child(1) { animation-delay: 0s !important; }
+            .bike:nth-child(2) { animation-delay: 0.6s !important; }
+            .bike:nth-child(3) { animation-delay: 1.2s !important; }
+            .bike:nth-child(4) { animation-delay: 1.8s !important; }
+            /* İkinci grup - 3sn sonra */
+            .bike:nth-child(5) { animation-delay: 4.8s !important; }
+            .bike:nth-child(6) { animation-delay: 5.4s !important; }
+            .bike:nth-child(7) { animation-delay: 6s !important; }
+            .bike:nth-child(8) { animation-delay: 6.6s !important; }
+            
+            /* Logo ve kulüp adını daha da yakınlaştırma */
+            .logo-section {
+                gap: 0.3rem; /* 0.3rem'den 0.2rem'e düşürerek daha yakınlaştırıyoruz */
+            }
+            .logo {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .slide-title {
+                font-size: 2.5rem;
+            }
+            .content-visible .slide-title {
+                font-size: 2rem;
+            }
+            .about-content p {
+                font-size: 0.9rem;
+                line-height: 1.3;
+            }
+            .content-visible .discover-btn {
+                transform: translateY(80px);
+            }
+            /* En küçük ekranlarda bisiklet animasyonunu ayarlama */
+            .bike {
+                animation: responsive-bikemove 7s linear infinite !important; /* Daha hızlı */
+                font-size: 2rem; /* Bisiklet emojilerini küçültme */
+            }
+            /* Bisikletçileri daha yakın aralıklarla ayarlama */
+            /* İlk grup */
+            .bike:nth-child(1) { animation-delay: 0s !important; }
+            .bike:nth-child(2) { animation-delay: 0.5s !important; }
+            .bike:nth-child(3) { animation-delay: 1s !important; }
+            .bike:nth-child(4) { animation-delay: 1.5s !important; }
+            /* İkinci grup - 3sn sonra */
+            .bike:nth-child(5) { animation-delay: 4.5s !important; }
+            .bike:nth-child(6) { animation-delay: 5s !important; }
+            .bike:nth-child(7) { animation-delay: 5.5s !important; }
+            .bike:nth-child(8) { animation-delay: 6s !important; }
+            
+            /* Logo ve kulüp adını maksimum yakınlaştırma */
+            .logo-section {
+                gap: 0.1rem; /* 0.2rem'den 0.1rem'e düşürerek daha yakınlaştırıyoruz */
+            }
+            .logo {
+                width: 45px;
+                height: 45px;
+            }
+            .club-name {
+                font-size: 1rem;
+            }
+            .club-name span {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Çok küçük ekranlar için logo ve kulüp adını iyice kompakt hale getirme */
+        @media (max-width: 320px) {
+            .logo {
+                width: 35px; /* Daha da küçülttüm */
+                height: 35px;
+            }
+            .club-name {
+                font-size: 0.85rem; /* Daha da küçülttüm */
+                flex-direction: row; /* İki satırı tek satıra sığdır */
+                gap: 0;
+            }
+            .club-name span {
+                font-size: 0.85rem;
+                margin-right: 0.05rem; /* Neredeyse yapışık */
+                line-height: 1.2;
+            }
+            .club-name span:last-child {
+                margin-right: 0;
+            }
+            .logo-section {
+                gap: 0.05rem; /* Neredeyse yapışık */
+            }
+            .about-btn {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+            /* second-row için daha küçük font */
+            .gallery-second-row {
+                font-size: 0.8rem;
+            }
+        }
+
+        .bike-animation-container {
+            position: relative;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.45) 100%);
+            overflow: hidden;
+            margin-top: -50px;
+            margin-bottom: 0;
+            z-index: 100;
+        }
+            
+        .bike {
+            position: absolute;
+            font-size: 2.5rem;
+            animation: bikemove 8s linear infinite;
+            left: 100%;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            top: 15px;
+            z-index: 101;
+        }
+
+        .bike:nth-child(2) { animation-delay: 0.5s; }
+        .bike:nth-child(3) { animation-delay: 1s; }
+        .bike:nth-child(4) { animation-delay: 1.5s; }
+        .bike:nth-child(5) { animation-delay: 2s; }
+        .bike:nth-child(6) { animation-delay: 2.5s; }
+        .bike:nth-child(7) { animation-delay: 3s; }
+        .bike:nth-child(8) { animation-delay: 3.5s; }
+
+        @keyframes bikemove {
+            from {
+                left: 100%;
+            }
+            to {
+                left: -50px;
+            }
+        }
+
+        .scrolling-text-container {
+            width: 100%;
+            height: 60px;
+            overflow: hidden;
+            background: white;
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            z-index: 5;
+        }
+
+        .scrolling-text {
+            display: flex;
+            position: absolute;
+            white-space: nowrap;
+            animation: scrollText 15s linear infinite;
+            left: 0;
+            width: auto;
+        }
+
+        .scrolling-text span {
+            padding: 0 30px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .text-aqua {
+            color: #00a884;
+            text-shadow: 0 0 1px rgba(0, 168, 132, 0.2);
+        }
+
+        .text-turquoise {
+            color: #40E0D0;
+            text-shadow: 0 0 1px rgba(64, 224, 208, 0.2);
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .tour-slider-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2d3748;
+                margin-bottom: 1.5rem;
+            font-weight: 600;
+            padding-top: 20px;
+            margin-top: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tour-slider-container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: stretch;
+        }
+
+        #events.tour-slider-title {
+            margin-top: -50px;
+            padding-top: 35px;
+            margin-bottom: -30px;
+            position: relative;
+            z-index: 3;
+            background: white;
+        }
+
+        .tour-slider-wrapper {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .tour-slider {
+            width: 100%;
+            height: 100%;
+        }
+
+        .tour-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 12px;
+            background-color: #f5f5f5;
+        }
+
+        .tour-slide.active {
+            opacity: 1;
+        }
+
+        .tour-content {
+            width: 100%;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+
+        .tour-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding: 0 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .tour-nav-btn {
+            background-color: #00a884;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            min-height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            z-index: 2;
+        }
+
+        .tour-nav-btn:hover {
+            background-color: #008f6f;
+            transform: scale(1.1);
+        }
+
+        .tour-description h3 {
+                font-size: 1.8rem;
+            color: #2d3748;
+            margin: 0;
+            font-weight: 600;
+            text-align: center;
+            flex-grow: 1;
+            padding: 0 10px;
+            width: calc(100% - 100px);
+            margin: 0 auto;
+        }
+
+        .tour-description {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .tour-description.active {
+            display: block;
+        }
+
+        .tour-description p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+
+        .tour-nav-buttons {
+            position: absolute;
+                top: 50%;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .tour-slider-wrapper:hover .tour-nav-buttons {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (min-width: 992px) {
+            .tour-slider-container {
+                flex-direction: row;
+                height: 450px;
+                gap: 2rem;
+            }
+            
+            .tour-slider-wrapper {
+                flex: 1;
+                height: 100%;
+            }
+            
+            .tour-content {
+                flex: 1;
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tour-slider-container {
+                margin-bottom: 20px;
+            }
+            
+            .tour-slider-wrapper {
+                height: 250px;
+                margin-bottom: 0;
+            }
+            
+            .tour-content {
+                padding: 1rem;
+            }
+            
+            .tour-description h3 {
+                font-size: 1.5rem;
+            }
+            
+            .tour-description p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+            
+            .tour-nav-btn {
+                width: 35px;
+                height: 35px;
+                min-width: 35px;
+                min-height: 35px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tour-slider-title {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            
+            .tour-slider-container {
+                margin-bottom: 30px;
+                gap: 1rem;
+            }
+            
+            .tour-slider-wrapper {
+                height: 200px;
+            }
+            
+            .tour-content {
+                padding: 0.8rem;
+            }
+            
+            .tour-description h3 {
+                font-size: 1.4rem;
+                padding: 0 8px;
+                width: calc(100% - 80px);
+            }
+            
+            .tour-description p {
+                font-size: 0.95rem;
+                line-height: 1.4;
+            }
+            
+            .tour-nav-btn {
+                width: 32px;
+                height: 32px;
+                min-width: 32px;
+                min-height: 32px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .tour-slider-title {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            
+            .tour-slider-container {
+                margin-bottom: 30px;
+                gap: 1rem;
+            }
+            
+            .tour-slider-wrapper {
+                height: 200px;
+            }
+            
+            .tour-content {
+                padding: 0.8rem;
+            }
+            
+            .tour-description h3 {
+                font-size: 1.3rem;
+                width: calc(100% - 70px);
+            }
+            
+            .tour-description p {
+                font-size: 0.9rem;
+            }
+            
+            .tour-nav-btn {
+                width: 30px;
+                height: 30px;
+                min-width: 30px;
+                min-height: 30px;
+            }
+        }
+
+        .events-container {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            max-width: 1200px;
+            justify-content: center;
+        }
+
+        .event-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 350px;
+            width: 100%;
+        }
+
+        .event-title {
+            font-size: 2rem;
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .event-poster {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        .event-poster:hover img {
+            transform: scale(1.05);
+        }
+
+        .event-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .event-poster:hover .event-overlay {
+            opacity: 1;
+        }
+
+        .event-overlay h4 {
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+        }
+
+        .event-overlay p {
+            font-size: 1.1rem;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .event-btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            min-width: 150px;
+            max-width: 100%;
+        }
+
+        .register-btn {
+            background-color: #00a884;
+            color: white;
+        }
+
+        .register-btn:hover {
+            background-color: #008f6f;
+            transform: translateY(-2px);
+        }
+
+        .soon-btn {
+            background-color: #00a884;
+            color: white;
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .events-container {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 1rem;
+                gap: 3rem;
+            }
+
+            .event-section {
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 0;
+            }
+
+            .event-poster {
+                height: 450px;
+                max-width: 100%;
+            }
+            
+            .event-overlay {
+                opacity: 1;
+                padding: 1.5rem;
+                background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+            }
+            
+            .event-title {
+                font-size: 1.8rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .event-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+                min-width: 120px;
+                width: 100%;
+            }
+            
+            .event-overlay h4 {
+                font-size: 1.3rem;
+            }
+            
+            .event-overlay p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .events-container {
+                padding: 0 0.5rem;
+                margin: 1.5rem auto;
+            }
+            
+            .event-section {
+                max-width: 350px;
+                margin-bottom: 1.5rem;
+            }
+            
+            .event-poster {
+                height: 400px;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .event-overlay {
+                padding: 1.2rem;
+                opacity: 1;
+            }
+            
+            .event-title {
+                font-size: 1.6rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .event-btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .event-section {
+                max-width: 100%;
+            }
+            
+            .event-poster {
+                height: 350px;
+            }
+            
+            .event-overlay {
+                padding: 1rem;
+                opacity: 1;
+                background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 60%, transparent 100%);
+            }
+            
+            .event-title {
+                font-size: 1.4rem;
+            }
+            
+            .event-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .event-overlay h4 {
+                font-size: 1.1rem;
+            }
+            
+            .event-overlay p {
+                font-size: 0.9rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        .gallery-container {
+            padding: 0 2rem;
+            background: white;
+            transition: all 0.3s ease;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            padding: 1rem;
+        }
+
+        .gallery-filter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 1rem;
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #4a5568;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .filter-btn.active {
+            background: #00a884;
+            color: white;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .filter-btn.view-all {
+            background: #4169E1;
+            color: white;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.view-all.active {
+            background: #2850c9;
+            position: fixed;
+            top: 85px;
+            left: 1rem;
+            z-index: 10000;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-left: 2.5rem;
+        }
+
+        .filter-btn.view-all.active::before {
+            content: '←';
+            font-size: 1.2rem;
+            position: absolute;
+            left: 1rem;
+        }
+
+        .gallery-container.fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            padding: 0;
+            overflow-y: auto;
+            background: white;
+        }
+        
+        .gallery-grid.fullscreen {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        /* Mobil cihazlarda tam ekran modunda ekstra fotoğraf başlıkları için özel stil */
+        @media (max-width: 768px) {
+            .gallery-grid.fullscreen .gallery-hover {
+                opacity: 1;
+                background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2), transparent);
+            }
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            padding: 1rem;
+            position: relative;
+            transition: all 0.3s ease;
+            justify-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid.fullscreen {
+            grid-template-columns: repeat(4, 1fr);
+            max-width: none;
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            opacity: 1;
+            transform: scale(1);
+            transition: all 0.5s ease;
+            position: relative;
+            width: 280px;
+            height: 280px;
+            aspect-ratio: 1 / 1;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery-item.hidden {
+            display: none;
+        }
+
+        .gallery-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+
+        .gallery-image {
+            position: relative;
+            height: 280px;
+            width: 280px;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-image img:active + .gallery-hover {
+            opacity: 1;
+        }
+
+        .gallery-card:hover .gallery-image img {
+            transform: scale(1.1);
+        }
+
+        .gallery-hover {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .gallery-card:hover .gallery-hover,
+        .gallery-card:active .gallery-hover {
+            opacity: 1;
+        }
+
+        .see-more-card {
+            background: #00a884;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .see-more-card:hover {
+            background: #008f6f;
+            transform: translateY(-10px);
+        }
+
+        .see-more-content {
+            text-align: center;
+            color: white;
+        }
+
+        .see-more-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .see-more-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-filter {
+                padding: 0 1rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                padding: 1rem;
+                gap: 0.5rem;
+            }
+            
+            .gallery-item {
+                width: 280px;
+                height: 280px;
+            }
+
+            .gallery-image {
+                height: 280px;
+                width: 280px;
+            }
+
+            .gallery-hover {
+                font-size: 1.2rem;
+                padding: 1.5rem;
+                opacity: 1;  /* Mobil görünümde her zaman görünür olsun */
+                background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2), transparent);
+            }
+            
+            .gallery-grid.fullscreen {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 0.8rem;
+                justify-items: center;
+            }
+            
+            .gallery-grid.fullscreen .gallery-item {
+                width: auto;
+                max-width: 300px; /* 295px'den 260px'e küçültüldü */
+                height: 300px; /* Yükseklik değeri eklendi */
+            }
+            
+            .gallery-grid.fullscreen .gallery-image {
+                height: 300px;
+                width: 100%; /* Genişlik değeri güncellendi */
+                max-width: 300px; /* Maksimum genişlik değeri eklendi */
+            }
+
+            .filter-btn.view-all.active {
+                top: 0.5rem;
+                left: 0.5rem;
+            }
+            
+            .gallery-container {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 0.3rem;
+                padding: 0.5rem;
+            }
+            
+            .gallery-item {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .gallery-image {
+                height: 250px;
+                width: 250px;
+            }
+            
+            .gallery-hover {
+                font-size: 1rem;
+                padding: 1rem;
+                opacity: 1;  /* Mobil görünümde her zaman görünür olsun */
+                background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2), transparent);
+            }
+            
+            .gallery-grid.fullscreen {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 0.8rem;
+                justify-items: center;
+            }
+            
+            .gallery-grid.fullscreen .gallery-item {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .gallery-grid.fullscreen .gallery-image {
+                height: 300px;
+                width: 300px;
+            }
+        }
+
+        .join-section {
+            position: relative;
+            margin: 4rem 0;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .join-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .join-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .join-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                rgba(0, 0, 0, 0.8) 0%, 
+                rgba(0, 0, 0, 0.6) 30%, 
+                rgba(0, 0, 0, 0.4) 60%, 
+                rgba(0, 0, 0, 0.2) 80%, 
+                rgba(0, 0, 0, 0) 100%
+            );
+        }
+
+        .join-content {
+            position: relative;
+            color: white;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding: 0 1rem;
+            width: 100%;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .join-content h2 {
+            font-size: 3rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin: 0;
+        }
+
+        .join-btn {
+            background-color: #00a884;
+            color: white;
+            border: none;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: auto;
+            max-width: 100%;
+        }
+
+        .join-btn:hover {
+            background-color: #008f6f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .join-section {
+                height: 300px;
+            }
+
+            .join-content {
+                gap: 1.5rem;
+            }
+
+            .join-content h2 {
+                font-size: 2rem;
+            }
+            
+            .join-btn {
+                padding: 0.8rem 2rem;
+                font-size: 1.1rem;
+            }
+
+            .join-overlay {
+                background: linear-gradient(90deg, 
+                    rgba(0, 0, 0, 0.8) 0%, 
+                    rgba(0, 0, 0, 0.6) 50%, 
+                    rgba(0, 0, 0, 0.4) 100%
+                );
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .join-section {
+                height: 250px;
+                margin: 2rem 0;
+            }
+            
+            .join-content {
+                gap: 1rem;
+            }
+            
+            .join-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .join-btn {
+                padding: 0.7rem 1.5rem;
+                font-size: 1rem;
+                letter-spacing: 0.5px;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .join-section {
+                height: 200px;
+                margin: 1.5rem 0;
+            }
+            
+            .join-content {
+                gap: 0.8rem;
+            }
+            
+            .join-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .join-btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+                letter-spacing: normal;
+            }
+            
+            .join-overlay {
+                background: rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 3rem 0;
+            margin-top: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .social-links-row {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            color: #4a5568;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.8rem ;
+            border-radius: 8px;
+            white-space: nowrap;
+        }
+
+        .social-link:hover {
+            color: #2d3748;
+            background-color: rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .footer-image {
+            width: 500px;
+            height: 200px;
+            margin-top: 3rem;
+            object-fit: contain;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .social-links-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .footer-image {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+                margin-top: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .footer-image {
+                max-width: 90%;
+                margin-top: 1.5rem;
+            }
+            
+            .footer-title {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        /* Çok küçük ekranlar için logo ve kulüp adını iyice kompakt hale getirme */
+        @media (max-width: 320px) {
+            .logo {
+                width: 35px; /* Daha da küçülttüm */
+                height: 35px;
+            }
+            .club-name {
+                font-size: 0.85rem; /* Daha da küçülttüm */
+                flex-direction: row; /* İki satırı tek satıra sığdır */
+                gap: 0;
+            }
+            .club-name span {
+                font-size: 0.85rem;
+                margin-right: 0.05rem; /* Neredeyse yapışık */
+                line-height: 1.2;
+            }
+            .club-name span:last-child {
+                margin-right: 0;
+        }
+        .logo-section {
+                gap: 0.05rem; /* Neredeyse yapışık */
+            }
+            .about-btn {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+            /* second-row için daha küçük font */
+            .gallery-second-row {
+                font-size: 0.8rem;
+            }
+        }
+
+        .bike-animation-container {
+            position: relative;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.45) 100%);
+            overflow: hidden;
+            margin-top: -50px;
+            margin-bottom: 0;
+            z-index: 100;
+        }
+            
+        .bike {
+            position: absolute;
+            font-size: 2.5rem;
+            animation: bikemove 8s linear infinite;
+            left: 100%;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            top: 15px;
+            z-index: 101;
+        }
+
+        .bike:nth-child(2) { animation-delay: 0.5s; }
+        .bike:nth-child(3) { animation-delay: 1s; }
+        .bike:nth-child(4) { animation-delay: 1.5s; }
+        .bike:nth-child(5) { animation-delay: 2s; }
+        .bike:nth-child(6) { animation-delay: 2.5s; }
+        .bike:nth-child(7) { animation-delay: 3s; }
+        .bike:nth-child(8) { animation-delay: 3.5s; }
+
+        @keyframes bikemove {
+            from {
+                left: 100%;
+            }
+            to {
+                left: -50px;
+            }
+        }
+
+        .scrolling-text-container {
+            width: 100%;
+            height: 60px;
+            overflow: hidden;
+            background: white;
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            z-index: 5;
+        }
+
+        .scrolling-text {
+            display: flex;
+            position: absolute;
+            white-space: nowrap;
+            animation: scrollText 15s linear infinite;
+            left: 0;
+            width: auto;
+        }
+
+        .scrolling-text span {
+            padding: 0 30px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .text-aqua {
+            color: #00a884;
+            text-shadow: 0 0 1px rgba(0, 168, 132, 0.2);
+        }
+
+        .text-turquoise {
+            color: #40E0D0;
+            text-shadow: 0 0 1px rgba(64, 224, 208, 0.2);
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .tour-slider-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2d3748;
+                margin-bottom: 1.5rem;
+            font-weight: 600;
+            padding-top: 20px;
+            margin-top: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .tour-slider-container {
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: stretch;
+        }
+
+        #events.tour-slider-title {
+            margin-top: -50px;
+            padding-top: 35px;
+            margin-bottom: -30px;
+            position: relative;
+            z-index: 3;
+            background: white;
+        }
+
+        .tour-slider-wrapper {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .tour-slider {
+            width: 100%;
+            height: 100%;
+        }
+
+        .tour-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 12px;
+            background-color: #f5f5f5;
+        }
+
+        .tour-slide.active {
+            opacity: 1;
+        }
+
+        .tour-content {
+            width: 100%;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+
+        .tour-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding: 0 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .tour-nav-btn {
+            background-color: #00a884;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            min-height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            z-index: 2;
+        }
+
+        .tour-nav-btn:hover {
+            background-color: #008f6f;
+            transform: scale(1.1);
+        }
+
+        .tour-description h3 {
+                font-size: 1.8rem;
+            color: #2d3748;
+            margin: 0;
+            font-weight: 600;
+            text-align: center;
+            flex-grow: 1;
+            padding: 0 10px;
+            width: calc(100% - 100px);
+            margin: 0 auto;
+        }
+
+        .tour-description {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .tour-description.active {
+            display: block;
+        }
+
+        .tour-description p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+
+        .tour-nav-buttons {
+            position: absolute;
+                top: 50%;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .tour-slider-wrapper:hover .tour-nav-buttons {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (min-width: 992px) {
+            .tour-slider-container {
+                flex-direction: row;
+                height: 450px;
+                gap: 2rem;
+            }
+            
+            .tour-slider-wrapper {
+                flex: 1;
+                height: 100%;
+            }
+            
+            .tour-content {
+                flex: 1;
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tour-slider-container {
+                margin-bottom: 20px;
+            }
+            
+            .tour-slider-wrapper {
+                height: 250px;
+                margin-bottom: 0;
+            }
+            
+            .tour-content {
+                padding: 1rem;
+            }
+            
+            .tour-description h3 {
+                font-size: 1.5rem;
+            }
+            
+            .tour-description p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+            
+            .tour-nav-btn {
+                width: 35px;
+                height: 35px;
+                min-width: 35px;
+                min-height: 35px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tour-slider-title {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            
+            .tour-slider-container {
+                margin-bottom: 30px;
+                gap: 1rem;
+            }
+            
+            .tour-slider-wrapper {
+                height: 200px;
+            }
+            
+            .tour-content {
+                padding: 0.8rem;
+            }
+            
+            .tour-description h3 {
+                font-size: 1.4rem;
+                padding: 0 8px;
+                width: calc(100% - 80px);
+            }
+            
+            .tour-description p {
+                font-size: 0.95rem;
+                line-height: 1.4;
+            }
+            
+            .tour-nav-btn {
+                width: 32px;
+                height: 32px;
+                min-width: 32px;
+                min-height: 32px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .tour-slider-title {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            
+            .tour-slider-container {
+                margin-bottom: 30px;
+                gap: 1rem;
+            }
+            
+            .tour-slider-wrapper {
+                height: 200px;
+            }
+            
+            .tour-content {
+                padding: 0.8rem;
+            }
+            
+            .tour-description h3 {
+                font-size: 1.3rem;
+                width: calc(100% - 70px);
+            }
+            
+            .tour-description p {
+                font-size: 0.9rem;
+            }
+            
+            .tour-nav-btn {
+                width: 30px;
+                height: 30px;
+                min-width: 30px;
+                min-height: 30px;
+            }
+        }
+
+        .events-container {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            max-width: 1200px;
+            justify-content: center;
+        }
+
+        .event-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 350px;
+            width: 100%;
+        }
+
+        .event-title {
+            font-size: 2rem;
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .event-poster {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+
+        .event-poster:hover img {
+            transform: scale(1.05);
+        }
+
+        .event-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .event-poster:hover .event-overlay {
+            opacity: 1;
+        }
+
+        .event-overlay h4 {
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+        }
+
+        .event-overlay p {
+            font-size: 1.1rem;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        .event-btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            min-width: 150px;
+            max-width: 100%;
+        }
+
+        .register-btn {
+            background-color: #00a884;
+            color: white;
+        }
+
+        .register-btn:hover {
+            background-color: #008f6f;
+            transform: translateY(-2px);
+        }
+
+        .soon-btn {
+            background-color: #00a884;
+            color: white;
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .events-container {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 1rem;
+                gap: 3rem;
+            }
+
+            .event-section {
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 0;
+            }
+
+            .event-poster {
+                height: 450px;
+                max-width: 100%;
+            }
+            
+            .event-overlay {
+                opacity: 1;
+                padding: 1.5rem;
+                background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+            }
+            
+            .event-title {
+                font-size: 1.8rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .event-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+                min-width: 120px;
+                width: 100%;
+            }
+            
+            .event-overlay h4 {
+                font-size: 1.3rem;
+            }
+            
+            .event-overlay p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .events-container {
+                padding: 0 0.5rem;
+                margin: 1.5rem auto;
+            }
+            
+            .event-section {
+                max-width: 350px;
+                margin-bottom: 1.5rem;
+            }
+            
+            .event-poster {
+                height: 400px;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .event-overlay {
+                padding: 1.2rem;
+                opacity: 1;
+            }
+            
+            .event-title {
+                font-size: 1.6rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .event-btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .event-section {
+                max-width: 100%;
+            }
+            
+            .event-poster {
+                height: 350px;
+            }
+            
+            .event-overlay {
+                padding: 1rem;
+                opacity: 1;
+                background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 60%, transparent 100%);
+            }
+            
+            .event-title {
+                font-size: 1.4rem;
+            }
+            
+            .event-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .event-overlay h4 {
+                font-size: 1.1rem;
+            }
+            
+            .event-overlay p {
+                font-size: 0.9rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        .gallery-container {
+            padding: 0 2rem;
+            background: white;
+            transition: all 0.3s ease;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            padding: 1rem;
+        }
+
+        .gallery-filter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 1rem;
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #4a5568;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .filter-btn.active {
+            background: #00a884;
+            color: white;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .filter-btn.view-all {
+            background: #4169E1;
+            color: white;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.view-all.active {
+            background: #2850c9;
+            position: fixed;
+            top: 85px;
+            left: 1rem;
+            z-index: 10000;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-left: 2.5rem;
+        }
+
+        .filter-btn.view-all.active::before {
+            content: '←';
+            font-size: 1.2rem;
+            position: absolute;
+            left: 1rem;
+        }
+
+        .gallery-container.fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            padding: 0;
+            overflow-y: auto;
+            background: white;
+        }
+        
+        .gallery-grid.fullscreen {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        /* Mobil cihazlarda tam ekran modunda ekstra fotoğraf başlıkları için özel stil */
+        @media (max-width: 768px) {
+            .gallery-grid.fullscreen .gallery-hover {
+                opacity: 1;
+                background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2), transparent);
+            }
+        }
+
+        .gallery-item {
+            height: 180px;
+        }
+
+        /* Responsive Header Menu */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: #2d3748;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 100;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            z-index: 1000;
+            padding: 5rem 2rem 2rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-nav.active {
+            transform: translateX(0);
+            display: flex;
+        }
+
+        .mobile-nav a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            font-size: 1.2rem;
+            padding: 0.8rem 0;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .mobile-nav a:last-child {
+            background-color: #00a884;
+            color: white;
+            border-radius: 8px;
+            margin-top: 1rem;
+            padding: 1rem 0;
+        }
+
+        .mobile-nav a:hover {
+            color: #00a884;
+        }
+
+        .mobile-nav a:last-child:hover {
+            color: white;
+            background-color: #008f6f;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .mobile-nav {
+                display: flex;
+            }
+            
+            .about-btn {
+                display: none;
+            }
+            
+            .header-content {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                padding: 0.5rem;
+                gap: 0.3rem; /* Yatay ve dikey boşluk her ikisi de bu değer */
+                justify-content: center;
+                column-gap: 0.05rem; /* Yan (sağ-sol) boşlukları daha da azalttım */
+            }
+            
+            .gallery-item {
+                width: 255px; /* 240px'den 255px'e artırıldı */
+                height: 240px;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .gallery-image {
+                height: 240px;
+                width: 255px; /* 240px'den 255px'e artırıldı */
+            }
+            
+            .gallery-card {
+                margin: 0;
+                width: 100%;
+                border-radius: 15px;
+            }
+            
+            .gallery-grid.fullscreen {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0.8rem;
+                column-gap: 0.1rem; /* Yan (sağ-sol) boşlukları daha da azalttım */
+            }
+            
+            .gallery-grid.fullscreen .gallery-item {
+                width: auto;
+                max-width: 295px; /* 280px'den 295px'e artırıldı */
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.5rem; /* 1rem'den azaltıldı */
+                column-gap: 0.08rem; /* Yan (sağ-sol) boşlukları daha da azalttım */
+            }
+            
+            .gallery-item {
+                width: 275px; /* 260px'den 275px'e artırıldı */
+                height: 260px;
+            }
+            
+            .gallery-image {
+                height: 260px;
+                width: 275px; /* 260px'den 275px'e artırıldı */
+            }
+            
+            .gallery-grid.fullscreen {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1rem; /* 1.8rem'den azaltıldı */
+                column-gap: 0.15rem; /* Yan (sağ-sol) boşlukları daha da azalttım */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-filter {
+                padding: 0 1rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                padding: 1rem;
+                gap: 1.2rem;
+                column-gap: 0.2rem; /* Yan (sağ-sol) boşlukları daha da azalttım */
+            }
+            
+            .gallery-item {
+                width: 340px; /* 320px'den 340px'e daha da büyütüldü */
+                height: 340px; /* 320px'den 340px'e daha da büyütüldü */
+            }
+
+            .gallery-image {
+                height: 340px; /* 320px'den 340px'e daha da büyütüldü */
+                width: 340px; /* 320px'den 340px'e daha da büyütüldü */
+            }
+
+            .gallery-hover {
+                font-size: 1.2rem;
+                padding: 1.5rem;
+            }
+            
+            .gallery-grid.fullscreen {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1.5rem;
+                justify-items: center;
+            }
+            
+            .gallery-grid.fullscreen .gallery-item {
+                width: 320px; /* 380px'den 320px'e küçültüldü */
+                height: 320px; /* 380px'den 320px'e küçültüldü */
+            }
+            
+            .gallery-grid.fullscreen .gallery-image {
+                height: 320px; /* 380px'den 320px'e küçültüldü */
+                width: 320px; /* 380px'den 320px'e küçültüldü */
+            }
+
+            .filter-btn.view-all.active {
+                top: 0.5rem;
+                left: 0.5rem;
+            }
+            
+            .gallery-container {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 1rem;
+                column-gap: 0.15rem; /* Yan (sağ-sol) boşlukları daha da azalttım */
+                padding: 0.8rem;
+            }
+            
+            .gallery-item {
+                width: 250px; /* 220px'den 250px'e daha da büyütüldü */
+                height: 250px; /* 220px'den 250px'e daha da büyütüldü */
+            }
+            
+            .gallery-image {
+                height: 250px; /* 220px'den 250px'e daha da büyütüldü */
+                width: 250px; /* 220px'den 250px'e daha da büyütüldü */
+            }
+            
+            .gallery-hover {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+            
+            .gallery-grid.fullscreen {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1.5rem;
+                justify-items: center;
+            }
+            
+            .gallery-grid.fullscreen .gallery-item {
+                width: 360px; /* 340px'den 360px'e daha da büyütüldü */
+                height: 360px; /* 340px'den 360px'e daha da büyütüldü */
+            }
+            
+            .gallery-grid.fullscreen .gallery-image {
+                height: 360px; /* 340px'den 360px'e daha da büyütüldü */
+                width: 360px; /* 340px'den 360px'e daha da büyütüldü */
+            }
+        }
+
+        .event-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .event-poster {
+            display: none;
+            width: 100%;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .event-poster.active {
+            display: block;
+        }
+        
+        .event-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .event-nav-btn {
+            background-color: #00a884;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin: 0 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s ease;
+        }
+        
+        .event-nav-btn:hover {
+            background-color: #008f6f;
+            transform: scale(1.1);
+        }
+        
+        .active-event-btn {
+            flex: 1;
+            max-width: 150px;
+        }
+
+        /* Responsive Menü */
+        .menu-btn {
+            display: none;
+            background-color: #00a884;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .menu-btn:hover {
+            background-color: #008f6f;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+            
+            .nav-menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: white;
+                padding: 1rem 0;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+                text-align: center;
+            }
+            
+            .nav-menu a.nav-item {
+                margin: 0.3rem 0;
+                padding: 0.3rem 0;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+            
+            /* Mobil görünümde yeşil Hakkımızda butonu için özel stil */
+            .nav-menu a[style*="background-color: #00a884"] {
+                width: auto;
+                max-width: 150px;
+                margin: 0.4rem auto;
+                display: block;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .about-btn {
+                display: none;
+            }
+            
+            .menu-btn {
+                display: block;
+            }
+            
+            .gallery-filter {
+                padding: 0 1rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                padding: 1rem;
+                gap: 1.2rem;
+                column-gap: 0.2rem; /* Yan (sağ-sol) boşlukları daha da azalttım */
+            }
+            
+            .gallery-item {
+                width: 340px; /* 320px'den 340px'e daha da büyütüldü */
+                height: 340px; /* 320px'den 340px'e daha da büyütüldü */
+            }
+
+            .gallery-image {
+                height: 340px; /* 320px'den 340px'e daha da büyütüldü */
+                width: 340px; /* 320px'den 340px'e daha da büyütüldü */
+            }
+
+            .gallery-hover {
+                font-size: 1.2rem;
+                padding: 1.5rem;
+            }
+            
+            .gallery-grid.fullscreen {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1.5rem;
+                justify-items: center;
+            }
+            
+            .gallery-grid.fullscreen .gallery-item {
+                width: 320px; /* 380px'den 320px'e küçültüldü */
+                height: 320px; /* 380px'den 320px'e küçültüldü */
+            }
+            
+            .gallery-grid.fullscreen .gallery-image {
+                height: 320px; /* 380px'den 320px'e küçültüldü */
+                width: 320px; /* 380px'den 320px'e küçültüldü */
+            }
+
+            .filter-btn.view-all.active {
+                top: 0.5rem;
+                left: 0.5rem;
+            }
+            
+            .gallery-container {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .menu-btn {
+                display: none;
+            }
+            
+            /* Masaüstü görünümünde nav-menu içindeki Hakkımızda butonunu gizle */
+            .nav-menu .nav-item[style*="background-color: #00a884"] {
+                display: none;
+            }
+            
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                padding: 0.5rem;
+                gap: 0.3rem; /* Yatay ve dikey boşluk her ikisi de bu değer */
+                justify-content: center;
+                column-gap: 0.05rem; /* Yan (sağ-sol) boşlukları daha da azalttım */
+            }
+            
+            .gallery-item {
+                width: 255px; /* 240px'den 255px'e artırıldı */
+                height: 240px;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .gallery-image {
+                height: 240px;
+                width: 255px; /* 240px'den 255px'e artırıldı */
+            }
+            
+            .gallery-card {
+                margin: 0;
+                width: 100%;
+                border-radius: 15px;
+            }
+            
+            .gallery-grid.fullscreen {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0.8rem;
+                column-gap: 0.1rem; /* Yan (sağ-sol) boşlukları daha da azalttım */
+            }
+            
+            .gallery-grid.fullscreen .gallery-item {
+                width: auto;
+                max-width: 295px; /* 280px'den 295px'e artırıldı */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .filter-btn.view-all {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-filter .filter-row {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .filter-btn {
+                margin: 0.3rem;
+                width: auto;
+                text-align: center;
+                min-width: 140px;
+            }
+
+            .filter-btn.active[data-filter="all"] {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            .filter-btn.view-all {
+                margin: 0.5rem auto;
+                min-width: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .filter-btn {
+                min-width: 120px;
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* En Büyük Projemiz Bölümü */
+        .project-section {
+            padding: 2px;
+            margin: 4rem 0;
+            background-color: #f8fafc;
+        }
+        
+        .project-heading {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 2.5rem;
+            padding-bottom: 6px;
+            position: relative;
+            font-weight: 600;
+        }
+        
+        .project-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #00a884;
+            border-radius: 2px;
+        }
+        
+        .project-container {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .project-slider {
+            width: 600px;
+            flex: none;
+            position: relative;
+            height: 480px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-right: 2rem;
+        }
+        
+        .project-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+           background-position: center;/*
+            background-repeat: no-repeat;
+            background-color: #ccc; */
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .project-slide.active {
+            opacity: 1;
+        }
+        
+        .project-nav {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            z-index: 10;
+        }
+        
+        .project-nav-btn {
+            background-color: #00a884;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            font-size: 1.4rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-nav-btn:hover {
+            background-color: #008f6f;
+            transform: scale(1.1);
+        }
+        
+        .project-content {
+            flex: 1;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .project-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            color: #4a5568;
+        }
+        
+        .discover-more-btn {
+            padding: 0.7rem 1.5rem;
+            background-color: #00a884;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            align-self: flex-start;
+        }
+        
+        .discover-more-btn:hover {
+            background-color: #008f6f;
+        }
+        
+        /* Footer görünmesi için CSS düzeltme */
+        .footer {
+            background-color: #f7fafc;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            display: block;
+            width: 100%;
+        }
+        
+        .footer-image {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin: 2rem auto 0;
+            height: auto;
+        }
+        
+        .footer-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #2d3748;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-links-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            color: #4a5568;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: #00a884;
+        }
+        
+        .social-icon {
+            margin-right: 0.5rem;
+        }
+
+        .discover-more-btn:hover {
+            background-color: #008f6f;
+        }
+        
+        /* Project section responsive düzenlemeler */
+        @media (max-width: 992px) {
+            .project-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .project-slider {
+                width: 100%;
+                max-width: 600px;
+                margin-right: 0;
+                margin-bottom: 2rem;
+                height: 400px;
+            }
+            
+            .project-content {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .discover-more-btn {
+                align-self: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-heading {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .project-slider {
+                height: 350px;
+            }
+            
+            .project-content p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-container {
+                padding: 0 1rem;
+            }
+            
+            .project-heading {
+                font-size: 1.8rem;
+            }
+            
+            .project-slider {
+                height: 300px;
+            }
+            
+            .project-nav-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+<style type="text/css" id="operaUserStyle"></style></head>
+<body style="">
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="logo.png" alt="Bisiklet Kulübü Logo" class="logo">
+                    <div class="club-name">
+                        <span>Ozyegin University</span>
+                        <span>Cycling Club</span>
+                    </div>
+                </div>
+                <nav class="nav-menu">
+                    <a href="#top" class="nav-item active">Main Page</a>
+                    <a href="#events" class="nav-item">Upcoming Activities</a>
+                    <a href="#tours" class="nav-item">Our Tours</a>
+                    <a href="#project" class="nav-item">Our Big Project</a>
+                    <a href="#join" class="nav-item">Join Us</a>
+                    <a href="#gallery" class="nav-item">Gallery</a>
+                    <a href="#footer" class="nav-item">Contact Us</a>
+                    <a href="Sponsorluk Dosyası.pdf" download class="nav-item" style="background-color: #00a884; color: white; border-radius: 8px; padding: 0.6rem 1.2rem; margin: 0.5rem auto; max-width: 150px;">Sponsorship</a>
+                    <a href="index.html" class="lang-btn-header" style="flex-direction: column; position: absolute; top: 22px; right: 10px; font-size: 0.9rem; margin-left: 0rem; display: flex; align-items: center; justify-content: right; width: 40px; height: 40px; min-width: 28px; text-decoration: none;">
+                        <img src="https://flagcdn.com/tr.svg" alt="English" style="width: 100%; height: auto;" />
+                        <span>TR</span>
+                    </a>
+                </nav>
+                <a href="Sponsorluk Dosyası.pdf" download class="about-btn" style="background-color: #00a884; color: white;">Sponsorship</a>
+                
+                <button class="menu-btn">Menu</button>
+            </div>
+        </header>
+        
+        <div class="slider-container" id="top">
+            <div class="slider">
+                <div class="slide active" style="background-image: url(&quot;https://drive.google.com/thumbnail?id=10mDQfNpm7C-F-MiRrywCckezgWuZ0ubY&amp;sz=w1000&quot;);"></div>
+                <div class="slide" style="background-image: url(&quot;https://drive.google.com/thumbnail?id=1NoNqTQ9K2mr-trdzcvSLtjqWCIz9U3Xp&amp;sz=w1000&quot;);"></div>
+                <div class="slide" style="background-image: url(&quot;https://drive.google.com/thumbnail?id=1pMWqiJkFwj3hdcQoMHtjVrtbO601KMyr&amp;sz=w1000&quot;);"></div>
+                <div class="slide" style="background-image: url(&quot;https://drive.google.com/thumbnail?id=1zGgkQ3Xc4BYK6KZc7_uaa5Z74BUEl3Ou&amp;sz=w1000&quot;);"></div>
+            </div>
+            <div class="slide-overlay" id="slider-overlay">
+                <div class="slide-content">
+                    <h1 class="slide-title">Who Are We?</h1>
+                    <button class="discover-btn" data-text-default="Discover" data-text-active="Hide">Discover</button>
+                    <div class="about-content">
+                        <p>As Ozyegin University Bicycle Club, we feel freedom and solidarity wherever pedals return! While we bring together tours, sports and entertainment in nature and the city, we encourage sustainability and water awareness, and at the same time, we aim to spread the culture of cycling. Join us to explore new places, lead a healthy life and establish good friendships! 🚴‍♂️🌿</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bike-animation-container">
+            <div class="bike">🚴‍♂️</div>
+            <div class="bike">🚴‍♀️</div>
+            <div class="bike">🚴</div>
+            <div class="bike">🚴‍♂️</div>
+            <div class="bike">🚴‍♀️</div>
+            <div class="bike">🚴</div>
+            <div class="bike">🚴‍♂️</div>
+            <div class="bike">🚴‍♀️</div>
+        </div>
+
+        <h2 class="tour-slider-title" id="events" style="margin-top: 0rem;">Upcoming Activities</h2>
+        <div class="events-container">
+            <div class="event-section kampus-disi">
+                <h3 class="event-title"></h3>
+                <div class="event-slider">
+                        <div class="event-poster active" data-index="0">
+                            <img src="https://drive.google.com/thumbnail?id=1dnqlHRjJfyzPrp5n6Hc8zR5cyX9djv-Q&amp;sz=w1000" alt="Çanakkale Turu">
+                            <div class="event-overlay">
+                                <h4>Çanakkale Turu</h4>
+                                <p>15 Nisan 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="event-navigation">
+                    <button class="event-nav-btn prev-event kampus-disi-prev" style="display:none;">❮</button>
+                    <button class="event-btn register-btn active-event-btn">Register</button>
+                    <button class="event-nav-btn next-event kampus-disi-next" style="display:none;">❯</button>
+                </div>
+            </div>
+            <div class="event-section kampus-ici">
+                <h3 class="event-title"></h3>
+                <div class="event-slider">
+                        <div class="event-poster active" data-index="0">
+                            <img src="https://drive.google.com/thumbnail?id=17NMSmh80mbrNh4tUFgO4iW9fIWwDHcv5&amp;sz=w1000" alt="Bisiklet 101">
+                            <div class="event-overlay">
+                                <h4>Bisiklet 101</h4>
+                                <p>1 Mayıs 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="event-navigation">
+                    <button class="event-nav-btn prev-event kampus-ici-prev" style="display:none;">❮</button>
+                    <button class="event-btn soon-btn active-event-btn" disabled="">Soon</button>
+                    <button class="event-nav-btn next-event kampus-ici-next" style="display:none;">❯</button>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .event-slider {
+                position: relative;
+                width: 100%;
+                overflow: hidden;
+            }
+            
+            .event-poster {
+                display: none;
+                width: 100%;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+            
+            .event-poster.active {
+                display: block;
+            }
+            
+            .event-navigation {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1rem;
+            }
+            
+            .event-nav-btn {
+                background-color: #00a884;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 36px;
+                height: 36px;
+                font-size: 1.2rem;
+                cursor: pointer;
+                margin: 0 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.2s ease;
+            }
+            
+            .event-nav-btn:hover {
+                background-color: #008f6f;
+                transform: scale(1.1);
+            }
+            
+            .active-event-btn {
+                flex: 1;
+                max-width: 150px;
+            }
+        </style>
+
+        <div class="scrolling-text-container">
+            <div class="scrolling-text">
+                <span class="text-aqua">#ozubisiklet</span>
+                <span class="text-turquoise">Pedal To Life!</span>
+                <span class="text-aqua">Water Is Life</span>
+                <span class="text-turquoise">Let's Pedal !</span>
+                <span class="text-aqua">#ozubisiklet</span>
+                <span class="text-turquoise">Pedal To Life!</span>
+                <span class="text-aqua">Water Is Life</span>
+                <span class="text-turquoise">Let's Pedal !</span>
+            </div>
+        </div>
+
+        <h2 class="tour-slider-title" id="tours">Our Tours</h2>
+        <div class="tour-slider-container">
+            <div class="tour-slider-wrapper">
+                <div class="tour-slider">
+                            <div class="tour-slide buyukada active" style="background-image: url('https://drive.google.com/thumbnail?id=166oejG-IFIxAnpbKzyBs9dFyI_oO0EqS&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide buyukada" style="background-image: url('https://drive.google.com/thumbnail?id=1lgwHvujrWbXhsdoxjU-1EtkLg-LgY567&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide buyukada" style="background-image: url('https://drive.google.com/thumbnail?id=1oOfgv3VLpbopdbUbCbH_QIQ4I1Jb87ls&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide buyukada" style="background-image: url('https://drive.google.com/thumbnail?id=1K27k7OwJa3uu0V6pOt8hHJVnD5NHbYgC&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  heybeliada" style="background-image: url('https://drive.google.com/thumbnail?id=1pMWqiJkFwj3hdcQoMHtjVrtbO601KMyr&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  heybeliada" style="background-image: url('https://drive.google.com/thumbnail?id=1SphG9Ak4809vq9Zj5kxZVCxwHjaJSO5m&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  heybeliada" style="background-image: url('https://drive.google.com/thumbnail?id=1TXY0Sj2NaB6L58wKfuF-p-Q0l8Kls2E6&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  heybeliada" style="background-image: url('https://drive.google.com/thumbnail?id=1ptWaJkTDq1i6lGugmTURAXP6GFptO_4C&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  bostanci" style="background-image: url('https://drive.google.com/thumbnail?id=1zGgkQ3Xc4BYK6KZc7_uaa5Z74BUEl3Ou&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  bostanci" style="background-image: url('https://drive.google.com/thumbnail?id=1tQXoOopba67kk3JmNQrH4oAVtdHp04pW&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  bostanci" style="background-image: url('https://drive.google.com/thumbnail?id=1-oDa84EPosZZrDYUTx8zFKGI1hTNnz2b&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  bostanci" style="background-image: url('https://drive.google.com/thumbnail?id=1BNQqzyWE4SPSYf_VvMHpSx0fyjSBSrHm&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  anadolukavagi" style="background-image: url('https://drive.google.com/thumbnail?id=1YS4yVnCzwirJUSPak4fsAIj5Ah1s80QF&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  anadolukavagi" style="background-image: url('https://drive.google.com/thumbnail?id=1jJa5RElVWf8Ho18B07-mmXlFTl6PD5mU&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  anadolukavagi" style="background-image: url('https://drive.google.com/thumbnail?id=1QKUWEv9Sy8gOpz0DfPxk8YvwwNIckmqs&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  anadolukavagi" style="background-image: url('https://drive.google.com/thumbnail?id=1UY4KRYxstev04DjEfiR6YZFfKoynz3MH&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  beykoz" style="background-image: url('https://drive.google.com/thumbnail?id=1eu3WW1Fx3F62_ZG_CCtgKv8vUm0mL7Iw&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  beykoz" style="background-image: url('https://drive.google.com/thumbnail?id=1FeR7nujopJLO95vVJuiDGm11FoVBkmwP&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  beykoz" style="background-image: url('https://drive.google.com/thumbnail?id=1gth5IF-8AceIli-7O9BNeUSZd5HYvO0U&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  beykoz" style="background-image: url('https://drive.google.com/thumbnail?id=1uPbpMn0yTlyQoWzOMzABDWwY5pMNYGqp&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  bogaz" style="background-image: url('https://drive.google.com/thumbnail?id=1xX6BplKI5tAkUznjcPFy2H15ZL6Hg4tR&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  bogaz" style="background-image: url('https://drive.google.com/thumbnail?id=1KH9iLffGI3t72_H4Z0k8sDF68qQSHvTB&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  bogaz" style="background-image: url('https://drive.google.com/thumbnail?id=1bYjzcNGXyin_gtQEVnDm1bDTN8DHzIwx&amp;sz=w1000')"></div>
+                        
+                            <div class="tour-slide  bogaz" style="background-image: url('https://drive.google.com/thumbnail?id=1jtbPbMnu_FXskCqXVj4P_PeLlOxLW8pz&amp;sz=w1000')"></div>
+                        </div>
+            </div>
+            <div class="tour-content">
+                        <div class="tour-description active">
+                            <div class="tour-header">
+                                <button class="tour-nav-btn prev-tour">❮</button>
+                                <h3>Büyükada Turu</h3>
+                                <button class="tour-nav-btn next-tour">❯</button>
+                            </div>
+                            <p>Adalar'ın en büyüğü olan Büyükada'da, tarihi köşkler ve çam ormanları arasında keyifli bir tura ne dersin? Aya Yorgi'ye tırmanırken biraz terleyeceğiz ama manzara görmeye değecek! Dönüşte ada sokakları arasında kaybolup, dondurmamızı da yiyeceğiz. Sen de bizimle gel, bu güzel adayı birlikte keşfedelim! 🚲🌲</p>
+                        </div>
+                    
+                        <div class="tour-description ">
+                            <div class="tour-header">
+                                <button class="tour-nav-btn prev-tour">❮</button>
+                                <h3>Heybeliada Turu</h3>
+                                <button class="tour-nav-btn next-tour">❯</button>
+                            </div>
+                            <p>Heybeliada'nın eşsiz manzarasında, doğa ve tarihin buluştuğu rotalarda pedal çevirmeye hazır mısın? Çam kokulu yollarda ilerlerken Ruhban Okulu'nu ziyaret edecek, tepeden İstanbul manzarasını seyredip kahvelerimizi yudumlayacağız. Hadi sen de katıl, bu keyifli maceraya ortak ol! ⛰️🌅</p>
+                        </div>
+                    
+                        <div class="tour-description ">
+                            <div class="tour-header">
+                                <button class="tour-nav-btn prev-tour">❮</button>
+                                <h3>Bostancı-Maltepe Sahil Turu</h3>
+                                <button class="tour-nav-btn next-tour">❯</button>
+                            </div>
+                            <p>Deniz kenarında ferah bir sürüş deneyimine var mısın? Bostancı'dan Maltepe'ye uzanan sahil şeridinde, martıların eşliğinde pedal çevireceğiz. Yol boyunca mola verip çayımızı içecek, sohbet edecek, deniz havasının tadını çıkaracağız. Bisikletini kap da gel, birlikte sürelim! 🌊☕</p>
+                        </div>
+                    
+                        <div class="tour-description ">
+                            <div class="tour-header">
+                                <button class="tour-nav-btn prev-tour">❮</button>
+                                <h3>Anadolu Kavağı Turu</h3>
+                                <button class="tour-nav-btn next-tour">❯</button>
+                            </div>
+                            <p>Boğaz'ın kuzeyine doğru keyifli bir yolculuğa çıkıyoruz! Sahil boyunca ilerlerken tarihi yalıları selamlayacak, balıkçı teknelerinin arasından geçeceğiz. Anadolu Kavağı'nda meşhur balık ekmeklerimizi yiyip, çaylarımızı da içeceğiz. Bu güzel rotada bize katılmak ister misin? 🐟🚴‍♂️</p>
+                        </div>
+                    
+                        <div class="tour-description ">
+                            <div class="tour-header">
+                                <button class="tour-nav-btn prev-tour">❮</button>
+                                <h3>Beykoz Spor Ormanı Turu</h3>
+                                <button class="tour-nav-btn next-tour">❯</button>
+                            </div>
+                            <p>Şehrin gürültüsünden uzaklaşıp doğanın kalbine yolculuk yapmaya ne dersin? Beykoz'un yemyeşil ormanlarında, kuş sesleri eşliğinde pedal çevireceğiz. Parkurlarda biraz zorlansak da, molalarda sohbet edip enerjimizi toplayacağız. Doğa ile baş başa bu güzel maceraya sen de katıl! 🌳💚</p>
+                        </div>
+                    
+                        <div class="tour-description ">
+                            <div class="tour-header">
+                                <button class="tour-nav-btn prev-tour">❮</button>
+                                <h3>Boğaz Turu</h3>
+                                <button class="tour-nav-btn next-tour">❯</button>
+                            </div>
+                            <p>İstanbul Boğazı'nın eşsiz manzarası eşliğinde unutulmaz bir tura hazır ol! Tarihi yalılar, köprüler ve deniz manzarası eşliğinde pedal çevirirken, en güzel fotoğraf noktalarında mola vereceğiz. Boğaz'ın iki yakasını birlikte keşfedip, günbatımında çaylarımızı yudumlayacağız. Bu keyifli turda sen de aramızda ol! 🌅🌉</p>
+                        </div>
+                    </div>
+        </div>
+
+        <section class="project-section" id="project">
+            <h2 class="project-heading">Pedaling In Disappearing Waters</h2>
+            <div class="project-container">
+                <div class="project-slider">
+                    <!-- Resimler JavaScript ile PEDALLAYA_PEDALLAYA dizisinden yüklenecek -->
+                    <div class="project-nav">
+                        <button class="project-nav-btn prev-project">❮</button>
+                        <button class="project-nav-btn next-project">❯</button>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <p>Our project, which we have realized in our club values ​​based on sustainability and environmental consciousness issues and has a special place in our history, is the journey of awareness that we realized around the seven lakes in the Mediterranean Region in July 2023. This meaningful tour, which we completed with 12 members to draw attention to the drought problem, was transformed into a documentary by Metin Çavuş, a faculty member of Özyeğin University.
+                        In October 2024, our documentary met with a broad audience at the 212 Photography Festival and was supported by a panel on sustainability and water consciousness. This project has aroused a great impact not only in our university, but also in a large environment -sensitive community.</p>
+                    <a href="https://www.imdb.com/title/tt33598444/?ref_=nm_flmg_job_1_cred_t_1" target="_blank" class="discover-more-btn">Go To IMDB Page</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="join-section" id="join">
+            <div class="join-image">
+                <img src="uye_ol.gif" alt="Bisiklet Kulübü">
+                <div class="join-overlay"></div>
+            </div>
+            <div class="join-content">
+                <h2>Come And Join Us</h2>
+                <button class="join-btn">Join Us</button>
+            </div>
+        </div>
+
+        <div class="gallery-container" id="gallery">
+            <h2 class="gallery-title">Gallery</h2>
+            <div class="gallery-filter">
+                <div class="filter-row">
+                    <button class="filter-btn active" data-filter="all" style="">Highlights</button>
+                </div>
+                <div class="filter-row">
+                    <button class="filter-btn" data-filter="2024-2025">2024 - 2025</button>
+                    <button class="filter-btn" data-filter="2023-2024">2023 - 2024</button>
+                </div>
+                <div class="filter-row">
+                    <button class="filter-btn" data-filter="2022-2023">2022 - 2023</button>
+                    <button class="filter-btn" data-filter="2021-2022">2021 - 2022</button>
+                </div>
+                <div class="filter-row">
+                    <button class="filter-btn view-all">View All</button>
+                </div>
+            </div>
+            <div class="gallery-grid" style="gap: 15px;">
+                <div class="gallery-item" data-category="2024-2025">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="https://drive.google.com/thumbnail?id=166oejG-IFIxAnpbKzyBs9dFyI_oO0EqS&amp;sz=w1000" alt="Bisiklet Turu 1" id="gallery-img-2024-2025-1">
+                            <div class="gallery-hover" id="gallery-title-2024-2025-1">Büyükada Turu</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="2024-2025">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="https://drive.google.com/thumbnail?id=1pMWqiJkFwj3hdcQoMHtjVrtbO601KMyr&amp;sz=w1000" alt="Bisiklet Turu 2" id="gallery-img-2024-2025-2">
+                            <div class="gallery-hover" id="gallery-title-2024-2025-2">Heybeliada Turu</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="2024-2025">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="https://drive.google.com/thumbnail?id=1zGgkQ3Xc4BYK6KZc7_uaa5Z74BUEl3Ou&amp;sz=w1000" alt="Bisiklet Turu 3" id="gallery-img-2024-2025-3">
+                            <div class="gallery-hover" id="gallery-title-2024-2025-3">Bostancı Turu</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="2023-2024">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="https://drive.google.com/thumbnail?id=1YS4yVnCzwirJUSPak4fsAIj5Ah1s80QF&amp;sz=w1000" alt="Bisiklet Turu 4" id="gallery-img-2023-2024-1">
+                            <div class="gallery-hover" id="gallery-title-2023-2024-1">Anadolu Kavağı Turu</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="2023-2024">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="https://drive.google.com/thumbnail?id=1eu3WW1Fx3F62_ZG_CCtgKv8vUm0mL7Iw&amp;sz=w1000" alt="Bisiklet Turu 5" id="gallery-img-2023-2024-2">
+                            <div class="gallery-hover" id="gallery-title-2023-2024-2">Beykoz Turu</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="2023-2024">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="https://drive.google.com/thumbnail?id=1xX6BplKI5tAkUznjcPFy2H15ZL6Hg4tR&amp;sz=w1000" alt="Bisiklet Turu 6" id="gallery-img-2023-2024-3">
+                            <div class="gallery-hover" id="gallery-title-2023-2024-3">Boğaz Turu</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="2022-2023">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="https://drive.google.com/thumbnail?id=1oOfgv3VLpbopdbUbCbH_QIQ4I1Jb87ls&amp;sz=w1000" alt="Bisiklet Turu 7" id="gallery-img-2022-2023-1">
+                            <div class="gallery-hover" id="gallery-title-2022-2023-1">Büyükada Turu</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="2022-2023">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="https://drive.google.com/thumbnail?id=1TXY0Sj2NaB6L58wKfuF-p-Q0l8Kls2E6&amp;sz=w1000" alt="Bisiklet Turu 8" id="gallery-img-2022-2023-2">
+                            <div class="gallery-hover" id="gallery-title-2022-2023-2">Heybeliada Turu</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="2021-2022">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="https://drive.google.com/thumbnail?id=1-oDa84EPosZZrDYUTx8zFKGI1hTNnz2b&amp;sz=w1000" alt="Bisiklet Turu 9" id="gallery-img-2021-2022-1">
+                            <div class="gallery-hover" id="gallery-title-2021-2022-1">Bostancı Turu</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <h2 class="footer-title">Contact Us</h2>
+            <div class="footer-content">
+                <div class="social-links-row">
+                    <a href="https://www.instagram.com/ozubisiklet" class="social-link">
+                        <svg class="social-icon" xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="mailto:cycling.clubs@ozu.edu.tr" class="social-link">
+                        <svg class="social-icon" xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"></path>
+                        </svg>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://www.strava.com/athletes/148595980" class="social-link">
+                        <svg class="social-icon" xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7.04 13.828h4.169"></path>
+                        </svg>
+                        <span>Strava</span>
+                    </a>
+                </div>
+            </div>
+            <img src="hayata_pdeal_çevir.png" alt="Hayata Pedal Çevir" class="footer-image">
+        </div>
+    </footer>
+
+    <script>
+        // Tur başlıklarını düzgün formatta döndüren fonksiyon
+        function getTurBaslik(tur) {
+            const turBasliklari = {
+                'buyukada': 'Buyukada',
+                'heybeliada': 'Heybeliada',
+                'bostanci': 'Bostanci',
+                'anadolukavagi': 'Anadolu Kavagi',
+                'beykoz': 'Beykoz',
+                'bogaz': 'Bogaz',
+                'canakkale': 'Canakkale',
+                'bursa': 'Bursa',
+                'konya': 'Konya',
+                'rumelikavagi': 'Rumeli Kavagi'
+            };
+            return turBasliklari[tur] || tur.charAt(0).toUpperCase() + tur.slice(1);
+        }
+
+        // Slayt gösterisi için JavaScript
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const sliderOverlay = document.getElementById('slider-overlay');
+        const actionButton = document.querySelector('.discover-btn');
+        
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Her 5 saniyede bir slayt değişimi
+        setInterval(nextSlide, 5000);
+
+        // Keşfet/Gizle butonu için animasyon
+        actionButton.addEventListener('click', function() {
+            if (sliderOverlay.classList.contains('content-visible')) {
+                sliderOverlay.classList.remove('content-visible');
+                this.textContent = this.dataset.textDefault;
+            } else {
+                sliderOverlay.classList.add('content-visible');
+                this.textContent = this.dataset.textActive;
+            }
+        });
+
+        // Turlar slayt gösterisi için JavaScript
+        let currentTourSlide = 0;
+        let currentTourImageIndex = 0;
+        
+        function showTourContent(n) {
+            const tourSlides = document.querySelectorAll('.tour-slide');
+            const tourDescriptions = document.querySelectorAll('.tour-description');
+            
+            // Tüm slaytları ve açıklamaları gizle
+            tourSlides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            tourDescriptions.forEach(desc => {
+                desc.classList.remove('active');
+            });
+            
+            // Yeni tur indeksini hesapla
+            currentTourSlide = (n + tourDescriptions.length) % tourDescriptions.length;
+            
+            // Tur türlerini al
+            const turTurleri = Object.keys(GOOGLE_DRIVE_LINKLERI);
+            const currentTurTuru = turTurleri[currentTourSlide];
+            
+            // Seçilen turun ilk slaytını göster
+            const currentTurSlides = document.querySelectorAll(`.tour-slide.${currentTurTuru}`);
+            if (currentTurSlides.length > 0) {
+                currentTurSlides[0].classList.add('active');
+            }
+            
+            // Seçilen turun açıklamasını göster
+            tourDescriptions[currentTourSlide].classList.add('active');
+            
+            // Mevcut resim indeksini sıfırla
+            currentTourImageIndex = 0;
+            
+            console.log(`Tur değiştirildi: ${currentTourSlide} - ${currentTurTuru}`);
+        }
+
+        function rotateTourImages() {
+            const turTurleri = Object.keys(GOOGLE_DRIVE_LINKLERI);
+            const currentTurTuru = turTurleri[currentTourSlide];
+            
+            const currentTurSlides = document.querySelectorAll(`.tour-slide.${currentTurTuru}`);
+            
+            if (currentTurSlides.length > 0) {
+                currentTurSlides.forEach(slide => slide.classList.remove('active'));
+                currentTourImageIndex = (currentTourImageIndex + 1) % currentTurSlides.length;
+                currentTurSlides[currentTourImageIndex].classList.add('active');
+            }
+        }
+
+        // Sadece resimlerin otomatik geçişi için
+        setInterval(rotateTourImages, 5000);
+
+        // Sayfa içi kaydırma için JavaScript
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    let headerOffset;
+                    switch(this.getAttribute('href')) {
+                        case '#events':
+                            headerOffset = 75;
+                            break;
+                        case '#tours':
+                            headerOffset = 175;
+                            break;
+                        case '#join':
+                            headerOffset = 145;
+                            break;
+                        default:
+                            headerOffset = 95;
+                    }
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: this.getAttribute('href') === '#top' ? 0 : offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Galeri resimlerini yükle
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Galeri resimleri yükleniyor...');
+            
+            // Her yıl için resimleri yükle
+            Object.entries(GALERI_RESIMLERI).forEach(([yil, resimler]) => {
+                console.log(`${yil} yılı resimleri yükleniyor:`, resimler);
+                
+                resimler.forEach((resim, index) => {
+                    const imgId = `gallery-img-${yil}-${index + 1}`;
+                    const titleId = `gallery-title-${yil}-${index + 1}`;
+                    const imgElement = document.getElementById(imgId);
+                    const titleElement = document.getElementById(titleId);
+                    
+                    if (imgElement && titleElement) {
+                        imgElement.src = getGoogleDriveImageUrl(resim.id);
+                        titleElement.textContent = resim.baslik;
+                    }
+                });
+            });
+
+            // Galeri filtreleme için kod
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const galleryContainer = document.querySelector('.gallery-container');
+            const viewAllButton = document.querySelector('.filter-btn.view-all');
+
+            // Filtre butonları için
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filterValue = button.getAttribute('data-filter');
+                    
+                    // Tümünü Görüntüle butonu için özel durum
+                    if (button.classList.contains('view-all')) {
+                        return;
+                    }
+
+                    // Yıl filtreleri için toggle özelliği
+                    if (filterValue !== 'all') {
+                        const wasActive = button.classList.contains('active');
+                        
+                        // Diğer yıl filtrelerini deaktif yap
+                        filterButtons.forEach(btn => {
+                            if (btn.getAttribute('data-filter') !== 'all' && 
+                                !btn.classList.contains('view-all')) {
+                                btn.classList.remove('active');
+                            }
+                        });
+
+                        // Eğer buton aktif değilse aktif yap, aktifse deaktif yap
+                        if (!wasActive) {
+                            button.classList.add('active');
+                        }
+
+                        // Resimleri filtrele
+                        const allItems = document.querySelectorAll('.gallery-item, .gallery-item.extra-photo');
+                        allItems.forEach(item => {
+                            const category = item.getAttribute('data-category');
+                            if (wasActive) {
+                                // Filtre deaktif edildiğinde tüm resimleri göster
+                                item.classList.remove('hidden');
+                            } else {
+                                // Filtre aktif edildiğinde sadece seçili yılın resimlerini göster
+                                if (category === filterValue) {
+                                    item.classList.remove('hidden');
+                                } else {
+                                    item.classList.add('hidden');
+                                }
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Tümünü Görüntüle butonu için
+            viewAllButton.addEventListener('click', () => {
+                const isFullscreen = !viewAllButton.classList.contains('active');
+                
+                if (isFullscreen) {
+                    // Tam ekran moduna geç
+                    viewAllButton.classList.add('active');
+                    galleryContainer.classList.add('fullscreen');
+                    document.querySelector('.gallery-grid').classList.add('fullscreen');
+                    document.body.style.overflow = 'hidden';
+                    viewAllButton.textContent = 'Back';
+                    
+                    // Öne Çıkarılanlar butonunu gizle
+                    document.querySelector('.filter-btn[data-filter="all"]').style.display = 'none';
+
+                    // Resim ID'lerini yıllara eşleştir
+                    const resimYilEslestirme = {};
+                    Object.entries(GALERI_RESIMLERI).forEach(([yil, resimler]) => {
+                        resimler.forEach(resim => {
+                            resimYilEslestirme[resim.id] = yil;
+                        });
+                    });
+
+                    // Ekstra resimleri yıl bazlı yükle
+                    Object.entries(GALERI_EKSTRA_RESIMLERI).forEach(([yil, turlar]) => {
+                        // Her yıldaki turları işle
+                        Object.entries(turlar).forEach(([tur, resimler]) => {
+                            // Her tur için resimleri ekle
+                            resimler.forEach(resimId => {
+                                const galleryGrid = document.querySelector('.gallery-grid');
+                                const newItem = document.createElement('div');
+                                
+                                newItem.className = 'gallery-item extra-photo';
+                                newItem.setAttribute('data-category', yil);  // Yıl kategorisi doğrudan atanıyor
+                                
+                                newItem.innerHTML = `
+                                    <div class="gallery-card">
+                                        <div class="gallery-image">
+                                            <img src="${getGoogleDriveImageUrl(resimId)}" alt="${getTurBaslik(tur)} Tour">
+                                            <div class="gallery-hover">${getTurBaslik(tur)} Tour</div>
+                                        </div>
+                                    </div>
+                                `;
+                                
+                                galleryGrid.appendChild(newItem);
+                            });
+                        });
+                    });
+                } else {
+                    // Normal moda dön
+                    viewAllButton.classList.remove('active');
+                    galleryContainer.classList.remove('fullscreen');
+                    document.querySelector('.gallery-grid').classList.remove('fullscreen');
+                    document.body.style.overflow = '';
+                    viewAllButton.textContent = 'View All';
+                    
+                    // Öne Çıkarılanlar butonunu göster
+                    document.querySelector('.filter-btn[data-filter="all"]').style.display = '';
+
+                    // Ekstra resimleri kaldır
+                    document.querySelectorAll('.gallery-item.extra-photo').forEach(item => {
+                        item.remove();
+                    });
+                }
+            });
+        });
+
+        // Sayfa yüklendiğinde ana sayfaya yönlendirme için script
+        document.addEventListener('DOMContentLoaded', function() {
+            // URL'de hash varsa ve gallery'ye yönlendirme varsa, ana sayfaya yönlendir
+            if (window.location.hash === '#gallery') {
+                window.location.hash = '#top';
+            }
+            
+            // Bulunulan bölüme göre menü öğesini vurgulama
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            // Tüm bölümleri ID'leri ile birlikte manuel olarak tanımlayalım ve sıraya göre dizelim
+            const sectionIds = ['top', 'events', 'tours', 'project', 'join', 'gallery', 'footer', 'slider-overlay'];
+            const sections = sectionIds.map(id => document.getElementById(id)).filter(section => section !== null);
+            
+            // Sayfa kaydırıldıkça aktif bölümü belirle
+            function highlightActiveSection() {
+                // Sadece masaüstü görünümünde çalış (mobil değilse)
+                if (window.innerWidth <= 768) {
+                    // Mobil görünümde bütün aktif sınıfları kaldır
+                    navItems.forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    return;
+                }
+                
+                // Viewport yüksekliğinin 2/3'ü - daha yukarı bir nokta
+                const viewportThreshold = Math.floor(window.innerHeight * 0.4);
+                
+                // En son görünür olan bölüm
+                let visibleSection = null;
+                
+                // Özel durum: Son bölüm (footer)
+                const footer = document.getElementById('footer');
+                if (footer) {
+                    const footerRect = footer.getBoundingClientRect();
+                    // Sayfa sonuna yaklaşıldığında footer'ı aktif et
+                    if (footerRect.top < window.innerHeight - 100) {
+                        visibleSection = footer;
+                    }
+                }
+                
+                // Özel durum: Son bölüme gelmediyse, diğer bölümleri kontrol et
+                if (!visibleSection) {
+                    // Bölümleri yukarıdan aşağıya doğru kontrol et
+                    for (let i = 0; i < sections.length; i++) {
+                        const section = sections[i];
+                        if (!section) continue;
+                        
+                        const rect = section.getBoundingClientRect();
+                        
+                        // Bölüm viewport'un belirlenen eşiğinin altında ise
+                        if (rect.top <= viewportThreshold) {
+                            visibleSection = section;
+                        } else {
+                            // İlk görünür olmayan bölüme ulaştık, döngüyü sonlandır
+                            break;
+                        }
+                    }
+                }
+                
+                // Görünür bölüm yoksa, ilk bölümü seç
+                if (!visibleSection && sections.length > 0) {
+                    visibleSection = sections[0];
+                }
+                
+                // Aktif menü öğesini güncelle
+                navItems.forEach(item => {
+                    const href = item.getAttribute('href');
+                    
+                    if (visibleSection && href === '#' + visibleSection.id) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Sayfa kaydırma olayını dinle
+            window.addEventListener('scroll', highlightActiveSection);
+            
+            // Sayfa yüklendiğinde başlangıç durumunu ayarla
+            highlightActiveSection();
+            
+            // Diğer DOMContentLoaded işlemleri
+            console.log('Galeri resimleri yükleniyor...');
+            
+            // Etkinlik resimlerini güncelle
+            const kampusDisiFoto = document.querySelector('.event-section:first-child .event-poster img');
+            const kampusIciFoto = document.querySelector('.event-section:last-child .event-poster img');
+            
+            if (kampusDisiFoto && ETKINLIKLER.kampusDisi.length > 0) {
+                kampusDisiFoto.src = getGoogleDriveImageUrl(ETKINLIKLER.kampusDisi[0].resimId);
+                const baslik = kampusDisiFoto.closest('.event-poster').querySelector('h4');
+                const tarih = kampusDisiFoto.closest('.event-poster').querySelector('p');
+                if (baslik) baslik.textContent = ETKINLIKLER.kampusDisi[0].baslik;
+                if (tarih) tarih.textContent = ETKINLIKLER.kampusDisi[0].tarih;
+            }
+            
+            if (kampusIciFoto && ETKINLIKLER.kampusIci.length > 0) {
+                kampusIciFoto.src = getGoogleDriveImageUrl(ETKINLIKLER.kampusIci[0].resimId);
+                const baslik = kampusIciFoto.closest('.event-poster').querySelector('h4');
+                const tarih = kampusIciFoto.closest('.event-poster').querySelector('p');
+                if (baslik) baslik.textContent = ETKINLIKLER.kampusIci[0].baslik;
+                if (tarih) tarih.textContent = ETKINLIKLER.kampusIci[0].tarih;
+            }
+        });
+
+        // Etkinlik butonlarını güncelle
+        document.addEventListener('DOMContentLoaded', function() {
+            // ... existing code ...
+            
+            // Etkinlik butonlarını güncelle
+            const kampusDisiBtn = document.querySelector('.event-section:first-child .register-btn');
+            if (kampusDisiBtn && ETKINLIKLER.kampusDisi.kayitAcik) {
+                kampusDisiBtn.onclick = function() {
+                    window.open(ETKINLIKLER.kampusDisi.kayitLink, '_blank');
+                };
+            }
+            
+            const kampusIciBtn = document.querySelector('.event-section:last-child .soon-btn');
+            if (kampusIciBtn && ETKINLIKLER.kampusIci.kayitAcik) {
+                kampusIciBtn.onclick = function() {
+                    window.open(ETKINLIKLER.kampusIci.kayitLink, '_blank');
+                };
+            }
+            
+            // Üye ol butonunu güncelle
+            const uyeOlBtn = document.querySelector('.join-btn');
+            if (uyeOlBtn) {
+                uyeOlBtn.onclick = function() {
+                    window.open(UYE_OL_LINK, '_blank');
+                };
+            }
+            
+            // Responsive menü için
+            const menuBtn = document.querySelector('.menu-btn');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (menuBtn && navMenu) {
+                menuBtn.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+                
+                // Menü itemlerine tıklandığında menüyü kapat
+                const navItems = navMenu.querySelectorAll('a');
+                navItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+
+        // Etkinlikleri dinamik olarak yükle
+        function loadEvents() {
+            // Kampüs dışı etkinlikler için değişkenler
+            let currentKampusDisoEvent = 0;
+            const kampusDisiSlider = document.querySelector('.event-section.kampus-disi .event-slider');
+            const kampusDisiRegisterBtn = document.querySelector('.event-section.kampus-disi .event-btn.register-btn');
+            const kampusDisiPrevBtn = document.querySelector('.event-section.kampus-disi .kampus-disi-prev');
+            const kampusDisiNextBtn = document.querySelector('.event-section.kampus-disi .kampus-disi-next');
+            
+            // Kampüs içi etkinlikler için değişkenler
+            let currentKampusIciEvent = 0;
+            const kampusIciSlider = document.querySelector('.event-section.kampus-ici .event-slider');
+            const kampusIciRegisterBtn = document.querySelector('.event-section.kampus-ici .event-btn.soon-btn');
+            const kampusIciPrevBtn = document.querySelector('.event-section.kampus-ici .kampus-ici-prev');
+            const kampusIciNextBtn = document.querySelector('.event-section.kampus-ici .kampus-ici-next');
+            
+            console.log("loadEvents başladı - Sliderlar:", kampusDisiSlider, kampusIciSlider);
+            console.log("Etkinlikler:", ETKINLIKLER);
+            
+            // Türkçe tarih formatını ayrıştırma fonksiyonu (örn: "15 Nisan 2024")
+            function parseTurkishDate(dateStr) {
+                const months = {
+                    'Ocak': 0, 'Şubat': 1, 'Mart': 2, 'Nisan': 3, 'Mayıs': 4, 'Haziran': 5,
+                    'Temmuz': 6, 'Ağustos': 7, 'Eylül': 8, 'Ekim': 9, 'Kasım': 10, 'Aralık': 11
+                };
+                
+                const parts = dateStr.split(' ');
+                if (parts.length !== 3) {
+                    console.error(`Geçersiz tarih formatı: ${dateStr}`);
+                    return null;
+                }
+                
+                const day = parseInt(parts[0], 10);
+                const month = months[parts[1]];
+                const year = parseInt(parts[2], 10);
+                
+                if (isNaN(day) || month === undefined || isNaN(year)) {
+                    console.error(`Tarih ayrıştırma hatası: ${dateStr}, Gün: ${day}, Ay: ${month}, Yıl: ${year}`);
+                    return null;
+                }
+                
+                return new Date(year, month, day);
+            }
+            
+            // Son tarihlerini kontrol et ve geçmiş olanları otomatik olarak kayitAcik = false yap
+            const bugununTarihi = new Date();
+            
+            // Bugünün tarihini gün başına ayarla (saat, dakika, saniyeyi sıfırla)
+            bugununTarihi.setHours(0, 0, 0, 0);
+            console.log(`Bugünün tarihi: ${bugununTarihi}`);
+            
+            // Kampüs dışı etkinlikleri kontrol et
+            ETKINLIKLER.kampusDisi.forEach(etkinlik => {
+                const sonTarih = parseTurkishDate(etkinlik.kayitSon);
+                if (sonTarih) {
+                    console.log(`${etkinlik.baslik} için kayıt son tarihi: ${sonTarih}`);
+                    if (sonTarih < bugununTarihi) {
+                        console.log(`${etkinlik.baslik} için kayıt son tarihi geçmiş, kayıt otomatik kapatıldı.`);
+                        etkinlik.kayitAcik = false;
+                    }
+                }
+            });
+            
+            // Kampüs içi etkinlikleri kontrol et
+            ETKINLIKLER.kampusIci.forEach(etkinlik => {
+                const sonTarih = parseTurkishDate(etkinlik.kayitSon);
+                if (sonTarih) {
+                    console.log(`${etkinlik.baslik} için kayıt son tarihi: ${sonTarih}`);
+                    if (sonTarih < bugununTarihi) {
+                        console.log(`${etkinlik.baslik} için kayıt son tarihi geçmiş, kayıt otomatik kapatıldı.`);
+                        etkinlik.kayitAcik = false;
+                    }
+                }
+            });
+            
+            // Kampüs dışı etkinlikleri yükle
+            if (kampusDisiSlider) {
+                kampusDisiSlider.innerHTML = '';
+                ETKINLIKLER.kampusDisi.forEach((etkinlik, index) => {
+                    console.log(`Kampüs dışı etkinlik yükleniyor - ${index}:`, etkinlik);
+                    const isActive = index === 0 ? 'active' : '';
+                    const imgUrl = getGoogleDriveImageUrl(etkinlik.resimId);
+                    console.log(`Resim URL: ${imgUrl}`);
+                    
+                    kampusDisiSlider.innerHTML += `
+                        <div class="event-poster ${isActive}" data-index="${index}">
+                            <img src="${imgUrl}" alt="${etkinlik.baslik}">
+                            <div class="event-overlay">
+                                <h4>${etkinlik.baslik}</h4>
+                                <p>${etkinlik.tarih}</p>
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                console.error("Kampüs dışı slider bulunamadı!");
+            }
+            
+            // Kampüs içi etkinlikleri yükle
+            if (kampusIciSlider) {
+                kampusIciSlider.innerHTML = '';
+                ETKINLIKLER.kampusIci.forEach((etkinlik, index) => {
+                    console.log(`Kampüs içi etkinlik yükleniyor - ${index}:`, etkinlik);
+                    const isActive = index === 0 ? 'active' : '';
+                    const imgUrl = getGoogleDriveImageUrl(etkinlik.resimId);
+                    console.log(`Resim URL: ${imgUrl}`);
+                    
+                    kampusIciSlider.innerHTML += `
+                        <div class="event-poster ${isActive}" data-index="${index}">
+                            <img src="${imgUrl}" alt="${etkinlik.baslik}">
+                            <div class="event-overlay">
+                                <h4>${etkinlik.baslik}</h4>
+                                <p>${etkinlik.tarih}</p>
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                console.error("Kampüs içi slider bulunamadı!");
+            }
+            
+            // Kampüs dışı navigasyon butonlarını etkinleştir
+            if (ETKINLIKLER.kampusDisi.length > 1) {
+                console.log("Kampüs dışı navigasyon butonları aktifleştiriliyor");
+                kampusDisiPrevBtn.style.display = 'flex';
+                kampusDisiNextBtn.style.display = 'flex';
+                
+                kampusDisiPrevBtn.onclick = function() {
+                    showKampusDisEvent(currentKampusDisoEvent - 1);
+                    updateKampusDisButton();
+                };
+                
+                kampusDisiNextBtn.onclick = function() {
+                    showKampusDisEvent(currentKampusDisoEvent + 1);
+                    updateKampusDisButton();
+                };
+            } else {
+                console.log("Tek kampüs dışı etkinlik var, navigasyon butonları gizleniyor");
+                kampusDisiPrevBtn.style.display = 'none';
+                kampusDisiNextBtn.style.display = 'none';
+            }
+            
+            // Kampüs içi navigasyon butonlarını etkinleştir
+            if (ETKINLIKLER.kampusIci.length > 1) {
+                console.log("Kampüs içi navigasyon butonları aktifleştiriliyor");
+                kampusIciPrevBtn.style.display = 'flex';
+                kampusIciNextBtn.style.display = 'flex';
+                
+                kampusIciPrevBtn.onclick = function() {
+                    showKampusIciEvent(currentKampusIciEvent - 1);
+                    updateKampusIciButton();
+                };
+                
+                kampusIciNextBtn.onclick = function() {
+                    showKampusIciEvent(currentKampusIciEvent + 1);
+                    updateKampusIciButton();
+                };
+            } else {
+                console.log("Tek kampüs içi etkinlik var, navigasyon butonları gizleniyor");
+                kampusIciPrevBtn.style.display = 'none';
+                kampusIciNextBtn.style.display = 'none';
+            }
+            
+            // Kayıt butonunun kullanılabilirliğini ve hedefini güncelle
+            updateKampusDisButton();
+            updateKampusIciButton();
+            
+            // Kampüs dışı etkinlik göster
+            function showKampusDisEvent(n) {
+                console.log(`Kampüs dışı etkinlik değiştiriliyor: ${n}`);
+                const eventPosters = kampusDisiSlider.querySelectorAll('.event-poster');
+                eventPosters.forEach(poster => poster.classList.remove('active'));
+                
+                currentKampusDisoEvent = (n + ETKINLIKLER.kampusDisi.length) % ETKINLIKLER.kampusDisi.length;
+                eventPosters[currentKampusDisoEvent].classList.add('active');
+            }
+            
+            // Kampüs içi etkinlik göster
+            function showKampusIciEvent(n) {
+                console.log(`Kampüs içi etkinlik değiştiriliyor: ${n}`);
+                const eventPosters = kampusIciSlider.querySelectorAll('.event-poster');
+                eventPosters.forEach(poster => poster.classList.remove('active'));
+                
+                currentKampusIciEvent = (n + ETKINLIKLER.kampusIci.length) % ETKINLIKLER.kampusIci.length;
+                eventPosters[currentKampusIciEvent].classList.add('active');
+            }
+            
+            // Kampüs dışı kayıt butonunu güncelle
+            function updateKampusDisButton() {
+                if (ETKINLIKLER.kampusDisi.length > 0) {
+                    const currentEvent = ETKINLIKLER.kampusDisi[currentKampusDisoEvent];
+                    
+                    // Kayıt son tarihini tekrar kontrol et
+                    const bugununTarihi = new Date();
+                    bugununTarihi.setHours(0, 0, 0, 0);
+                    const sonTarih = parseTurkishDate(currentEvent.kayitSon);
+                    
+                    if (sonTarih && sonTarih < bugununTarihi) {
+                        console.log(`${currentEvent.baslik} için kayıt son tarihi geçmiş, kayıt otomatik kapatıldı.`);
+                        currentEvent.kayitAcik = false;
+                    }
+                    
+                    console.log(`Kampüs dışı buton güncelleniyor, kayıt durumu: ${currentEvent.kayitAcik}`);
+                    
+                    if (currentEvent.kayitAcik) {
+                        kampusDisiRegisterBtn.disabled = false;
+                        kampusDisiRegisterBtn.textContent = 'Register';
+                        kampusDisiRegisterBtn.classList.remove('soon-btn');
+                        kampusDisiRegisterBtn.classList.add('register-btn');
+                        kampusDisiRegisterBtn.onclick = function() {
+                            window.open(currentEvent.kayitLink, '_blank');
+                        };
+                    } else {
+                        kampusDisiRegisterBtn.disabled = true;
+                        kampusDisiRegisterBtn.textContent = 'Passed';
+                        kampusDisiRegisterBtn.classList.add('soon-btn');
+                        kampusDisiRegisterBtn.classList.remove('register-btn');
+                    }
+                }
+            }
+            
+            // Kampüs içi kayıt butonunu güncelle
+            function updateKampusIciButton() {
+                if (ETKINLIKLER.kampusIci.length > 0) {
+                    const currentEvent = ETKINLIKLER.kampusIci[currentKampusIciEvent];
+                    
+                    // Kayıt son tarihini tekrar kontrol et
+                    const bugununTarihi = new Date();
+                    bugununTarihi.setHours(0, 0, 0, 0);
+                    const sonTarih = parseTurkishDate(currentEvent.kayitSon);
+                    
+                    if (sonTarih && sonTarih < bugununTarihi) {
+                        console.log(`${currentEvent.baslik} için kayıt son tarihi geçmiş, kayıt otomatik kapatıldı.`);
+                        currentEvent.kayitAcik = false;
+                    }
+                    
+                    console.log(`Kampüs içi buton güncelleniyor, kayıt durumu: ${currentEvent.kayitAcik}`);
+                    
+                    if (currentEvent.kayitAcik) {
+                        kampusIciRegisterBtn.disabled = false;
+                        kampusIciRegisterBtn.textContent = 'Kayıt Ol';
+                        kampusIciRegisterBtn.classList.remove('soon-btn');
+                        kampusIciRegisterBtn.classList.add('register-btn');
+                        kampusIciRegisterBtn.onclick = function() {
+                            window.open(currentEvent.kayitLink, '_blank');
+                        };
+                    } else {
+                        kampusIciRegisterBtn.disabled = true;
+                        kampusIciRegisterBtn.textContent = 'Passed';
+                        kampusIciRegisterBtn.classList.add('soon-btn');
+                        kampusIciRegisterBtn.classList.remove('register-btn');
+                    }
+                }
+            }
+        }
+
+        // Slayt gösterisi için JavaScript
+        let currentEvent = 0;
+        const eventPosters = document.querySelectorAll('.event-poster');
+        const eventNavigation = document.querySelector('.event-navigation');
+        const prevEventBtn = document.querySelector('.event-nav-btn.kampus-disi-prev');
+        const nextEventBtn = document.querySelector('.event-nav-btn.kampus-disi-next');
+        
+        function showEvent(n) {
+            if (eventPosters && eventPosters.length > 0) {
+                eventPosters.forEach(poster => poster.classList.remove('active'));
+                eventPosters[n].classList.add('active');
+                currentEvent = n;
+            }
+        }
+
+        // Her 5 saniyede bir etkinlik değişimi
+        setInterval(function() {
+            if (eventPosters && eventPosters.length > 0) {
+                showEvent((currentEvent + 1) % eventPosters.length);
+            }
+        }, 5000);
+
+        // Etkinlik navigasyon butonları için
+        if (prevEventBtn) {
+            prevEventBtn.addEventListener('click', function() {
+                if (eventPosters && eventPosters.length > 0) {
+                    showEvent((currentEvent - 1 + eventPosters.length) % eventPosters.length);
+                }
+            });
+        }
+
+        if (nextEventBtn) {
+            nextEventBtn.addEventListener('click', function() {
+                if (eventPosters && eventPosters.length > 0) {
+                    showEvent((currentEvent + 1) % eventPosters.length);
+                }
+            });
+        }
+
+        // Proje slaytları için JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectSlider = document.querySelector('.project-slider');
+            const prevProjectBtn = document.querySelector('.prev-project');
+            const nextProjectBtn = document.querySelector('.next-project');
+            const discoverMoreBtn = document.querySelector('.discover-more-btn');
+            let currentProjectSlide = 0;
+            
+            // PEDALLAYA_PEDALLAYA dizisinden dinamik olarak slaytları oluştur
+            if (projectSlider && PEDALLAYA_PEDALLAYA.length > 0) {
+                // Slaytları oluştur
+                PEDALLAYA_PEDALLAYA.forEach((imageId, index) => {
+                    const slide = document.createElement('div');
+                    slide.className = index === 0 ? 'project-slide active' : 'project-slide';
+                    const imageUrl = getGoogleDriveImageUrl(imageId);
+                    slide.style.backgroundImage = `url('${imageUrl}')`;
+                    
+                    // Nav butonlarının önüne slaytları ekle
+                    const navButtons = projectSlider.querySelector('.project-nav');
+                    projectSlider.insertBefore(slide, navButtons);
+                    
+                    console.log(`Proje resmi ${index + 1} yükleniyor:`, imageUrl);
+                });
+                
+                // Slaytları yeniden seç
+                const projectSlides = document.querySelectorAll('.project-slide');
+                
+                // Slayt gösterme fonksiyonu
+                function showProjectSlide(n) {
+                    projectSlides[currentProjectSlide].classList.remove('active');
+                    currentProjectSlide = (n + projectSlides.length) % projectSlides.length;
+                    projectSlides[currentProjectSlide].classList.add('active');
+                }
+                
+                // Otomatik slayt geçişi
+                setInterval(() => {
+                    showProjectSlide(currentProjectSlide + 1);
+                }, 5000);
+                
+                // Butonlara tıklama olayları
+                if (prevProjectBtn) {
+                    prevProjectBtn.addEventListener('click', () => {
+                        showProjectSlide(currentProjectSlide - 1);
+                    });
+                }
+                
+                if (nextProjectBtn) {
+                    nextProjectBtn.addEventListener('click', () => {
+                        showProjectSlide(currentProjectSlide + 1);
+                    });
+                }
+            }
+        });
+    </script>
+
+ </body></html>
