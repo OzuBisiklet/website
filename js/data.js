@@ -296,9 +296,6 @@ const GALERI_EKSTRA_RESIMLERI = {
     }
 };
 
-const kampus_disi_epmty = 0;
-const kampus_ici_empty = 0;
-
 // Etkinlikler Afişleri
 const ETKINLIKLER = {
     kampusDisi: [
@@ -322,13 +319,6 @@ const ETKINLIKLER = {
         }
     ]
 };
-
-if (kampus_disi_epmty === 1) {
-    ETKINLIKLER.kampusDisi = [ETKINLIKLER.empty];
-}
-if (kampus_ici_empty === 1) {
-    ETKINLIKLER.kampusIci = [ETKINLIKLER.empty];
-}   
 
 // Üye Ol Bölümü Resmi ve Linki
 const UYE_OL_RESIM = "uye_ol.gif";
