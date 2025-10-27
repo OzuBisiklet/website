@@ -3,7 +3,7 @@ let currentTourSlide = 0;
 let currentTourImageIndex = 0;
 
 // Tur slaytlarını dinamik olarak oluştur
-function initTourSlider() {
+function initTourSlider(selector) {
     const tourSlider = document.querySelector('.tour-slider');
     const tourContent = document.querySelector('.tour-content');
     
@@ -13,16 +13,27 @@ function initTourSlider() {
     
     // Her tur için slaytları ve içerikleri ekle
     let isFirstTour = true;
-    for (const [tur, data] of Object.entries(GOOGLE_DRIVE_LINKLERI)) {
+    for (const [tur, data] of Object.entries(tours_pictures_ids)) {
         try {                    
             // Tur resimlerini ekle
-            data.resimler.forEach((resimId, index) => {
+            data.ids.forEach((resimId, index) => {
                 const resimUrl = getGoogleDriveImageUrl(resimId);
                 const activeClass = isFirstTour && index === 0 ? 'active' : '';
                 tourSlider.innerHTML += `
                     <div class="tour-slide ${activeClass} ${tur}" style="background-image: url('${resimUrl}')"></div>
                 `;
             });
+
+            let title;
+            let desc;
+
+            if(selector == 0){
+                title = data.title_tr;
+                desc = data.desc_tr;
+            }else if(selector == 1){
+                title = data.title_eng;
+                desc = data.desc_eng;
+            }
             
             // Tur açıklamasını ekle
             const activeClass = isFirstTour ? 'active' : '';
@@ -30,10 +41,10 @@ function initTourSlider() {
                 <div class="tour-description ${activeClass}">
                     <div class="tour-header">
                         <button class="tour-nav-btn prev-tour">❮</button>
-                        <h3>${data.isim}</h3>
+                        <h3>${title}</h3>
                         <button class="tour-nav-btn next-tour">❯</button>
                     </div>
-                    <p>${data.aciklama}</p>
+                    <p>${desc}</p>
                 </div>
             `;
             
@@ -81,7 +92,7 @@ function showTourContent(n) {
     currentTourSlide = (n + tourDescriptions.length) % tourDescriptions.length;
     
     // Tur türlerini al
-    const turTurleri = Object.keys(GOOGLE_DRIVE_LINKLERI);
+    const turTurleri = Object.keys(tours_pictures_ids);
     const currentTurTuru = turTurleri[currentTourSlide];
     
     // Seçilen turun ilk slaytını göster
@@ -98,7 +109,7 @@ function showTourContent(n) {
 }
 
 function rotateTourImages() {
-    const turTurleri = Object.keys(GOOGLE_DRIVE_LINKLERI);
+    const turTurleri = Object.keys(tours_pictures_ids);
     const currentTurTuru = turTurleri[currentTourSlide];
     
     const currentTurSlides = document.querySelectorAll(`.tour-slide.${currentTurTuru}`);

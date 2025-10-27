@@ -3,21 +3,22 @@ function getGoogleDriveImageUrl(imageId) {
     return `https://drive.google.com/thumbnail?id=${imageId}&sz=w1000`;
 }
 
+
 // Tur başlıklarını düzgün formatta döndüren fonksiyon
-function getTurBaslik(tur) {
+function getTurBaslik(tur, selector) {
     const turBasliklari = {
-        'buyukada': 'Buyukada',
-        'heybeliada': 'Heybeliada',
-        'bostanci': 'Bostanci',
-        'anadolukavagi': 'Anadolu Kavagi',
-        'beykoz': 'Beykoz',
-        'bogaz': 'Bogaz',
-        'canakkale': 'Canakkale',
-        'bursa': 'Bursa',
-        'konya': 'Konya',
-        'rumelikavagi': 'Rumeli Kavagi'
+        'buyukada': ['Büyükada', 'Princes\' Island'],
+        'heybeliada': ['Heybeliada', 'Heybeliada'],
+        'bostanci': ['Bostancı', 'Bostanci'],
+        'anadolukavagi': ['Anadolu Kavağı', 'Anadolu Kavagi'],
+        'beykoz': ['Beykoz', 'Beykoz'],
+        'bogaz': ['Boğaz', 'Bosphorus'],
+        'canakkale': ['Çanakkale', 'Canakkale'],
+        'bursa': ['Bursa', 'Bursa'],
+        'konya': ['Konya', 'Konya'],
+        'rumelikavagi': ['Rumeli Kavağı', 'Rumeli Kavagi'],
     };
-    return turBasliklari[tur] || tur.charAt(0).toUpperCase() + tur.slice(1);
+    return turBasliklari[tur][selector] || tur.charAt(0).toUpperCase() + tur.slice(1);
 }
 
 // Türkçe tarih formatını ayrıştırma fonksiyonu (örn: "15 Nisan 2024")

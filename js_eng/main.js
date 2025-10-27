@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     initDiscoverButton();
     
     // Tur slider'ını başlat
-    initTourSlider();
+    initTourSlider(1);
     
     // Etkinlikleri dinamik olarak yükle
-    loadEvents();
+    loadEvents(1);
     
     // Galeri'yi başlat
-    initGallery();
+    initGallery(1);
     
     // Üye ol butonunu güncelle
     const uyeOlBtn = document.querySelector('.join-btn');

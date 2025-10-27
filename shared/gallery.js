@@ -1,7 +1,7 @@
 // Galeri resimlerini yükle
-function initGallery() {
+function initGallery(selector) {
     // Her yıl için resimleri yükle
-    Object.entries(GALERI_RESIMLERI).forEach(([yil, resimler]) => {                
+    Object.entries(gallery_highlights).forEach(([yil, resimler]) => {
         resimler.forEach((resim, index) => {
             const imgId = `gallery-img-${yil}-${index + 1}`;
             const titleId = `gallery-title-${yil}-${index + 1}`;
@@ -10,7 +10,12 @@ function initGallery() {
             
             if (imgElement && titleElement) {
                 imgElement.src = getGoogleDriveImageUrl(resim.id);
-                titleElement.textContent = resim.baslik;
+                if(selector == 0){
+                    titleElement.textContent = resim.tr;
+                }else if(selector == 1){
+                    titleElement.textContent = resim.eng;
+                }
+                
             }
         });
     });
@@ -79,36 +84,48 @@ function initGallery() {
                 galleryContainer.classList.add('fullscreen');
                 document.querySelector('.gallery-grid').classList.add('fullscreen');
                 document.body.style.overflow = 'hidden';
-                viewAllButton.textContent = 'Back';
+                if(selector == 0){
+                    viewAllButton.textContent = back_btn[0];
+                }else if(selector == 1){
+                    viewAllButton.textContent = back_btn[1];
+                }
                 
                 // Öne Çıkarılanlar butonunu gizle
                 document.querySelector('.filter-btn[data-filter="all"]').style.display = 'none';
 
                 // Resim ID'lerini yıllara eşleştir
                 const resimYilEslestirme = {};
-                Object.entries(GALERI_RESIMLERI).forEach(([yil, resimler]) => {
+                Object.entries(gallery_highlights).forEach(([yil, resimler]) => {
                     resimler.forEach(resim => {
                         resimYilEslestirme[resim.id] = yil;
                     });
                 });
 
                 // Ekstra resimleri yıl bazlı yükle
-                Object.entries(GALERI_EKSTRA_RESIMLERI).forEach(([yil, turlar]) => {
+                Object.entries(gallery_ids).forEach(([yil, turlar]) => {
                     // Her yıldaki turları işle
                     Object.entries(turlar).forEach(([tur, resimler]) => {
                         // Her tur için resimleri ekle
-                        resimler.forEach(resimId => {
+                        resimler.forEach(id => {
                             const galleryGrid = document.querySelector('.gallery-grid');
                             const newItem = document.createElement('div');
                             
                             newItem.className = 'gallery-item extra-photo';
                             newItem.setAttribute('data-category', yil);  // Yıl kategorisi doğrudan atanıyor
+
+                            let part;
+
+                            if(selector == 0){
+                                part = "Turu";
+                            }else if(selector == 1){
+                                part = "Tour";
+                            }
                             
                             newItem.innerHTML = `
                                 <div class="gallery-card">
                                     <div class="gallery-image">
-                                        <img src="${getGoogleDriveImageUrl(resimId)}" alt="${getTurBaslik(tur)} Tour">
-                                        <div class="gallery-hover">${getTurBaslik(tur)} Tour</div>
+                                        <img src="${getGoogleDriveImageUrl(id)}" alt="${getTurBaslik(tur, selector)} ${part}">
+                                        <div class="gallery-hover">${getTurBaslik(tur, selector)} ${part}</div>
                                     </div>
                                 </div>
                             `;
@@ -123,7 +140,11 @@ function initGallery() {
                 galleryContainer.classList.remove('fullscreen');
                 document.querySelector('.gallery-grid').classList.remove('fullscreen');
                 document.body.style.overflow = '';
-                viewAllButton.textContent = 'View All';
+                if(selector == 0){
+                    viewAllButton.textContent = view_all_btn[0];
+                }else if(selector == 1){
+                    viewAllButton.textContent = view_all_btn[1];
+                }
                 
                 // Öne Çıkarılanlar butonunu göster
                 document.querySelector('.filter-btn[data-filter="all"]').style.display = '';

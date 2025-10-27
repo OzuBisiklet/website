@@ -9,9 +9,9 @@ function initProjectSlider() {
     const discoverMoreBtn = document.querySelector('.discover-more-btn');
     
     // PEDALLAYA_PEDALLAYA dizisinden dinamik olarak slaytları oluştur
-    if (projectSlider && PEDALLAYA_PEDALLAYA.length > 0) {
+    if (projectSlider && project_pictures_ids.length > 0) {
         // Slaytları oluştur
-        PEDALLAYA_PEDALLAYA.forEach((imageId, index) => {
+        project_pictures_ids.forEach((imageId, index) => {
             const slide = document.createElement('div');
             slide.className = index === 0 ? 'project-slide active' : 'project-slide';
             const imageUrl = getGoogleDriveImageUrl(imageId);

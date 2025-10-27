@@ -14,7 +14,7 @@ function initSlider() {
     // Slider resimlerini yükle
     const slides = document.querySelectorAll('.slide');
     slides.forEach((slide, index) => {
-        const imageUrl = getGoogleDriveImageUrl(SLIDER_RESIMLERI[index]);
+        const imageUrl = getGoogleDriveImageUrl(slider_pictures_ids[index]);
         slide.style.backgroundImage = `url('${imageUrl}')`;
     });
 

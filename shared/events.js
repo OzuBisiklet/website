@@ -1,5 +1,5 @@
 // Etkinlikleri dinamik olarak yükle
-function loadEvents() {
+function loadEvents(selector) {
     // Kampüs dışı etkinlikler için değişkenler
     let currentKampusDisoEvent = 0;
     const kampusDisiSlider = document.querySelector('.event-section.kampus-disi .event-slider');
@@ -21,7 +21,7 @@ function loadEvents() {
     bugununTarihi.setHours(0, 0, 0, 0);
     
     // Kampüs dışı etkinlikleri kontrol et
-    ETKINLIKLER.kampusDisi.forEach(etkinlik => {
+    events_details.kampusDisi.forEach(etkinlik => {
         const sonTarih = parseTurkishDate(etkinlik.kayitSon);
         if (sonTarih) {
             if (sonTarih < bugununTarihi) {
@@ -31,7 +31,7 @@ function loadEvents() {
     });
     
     // Kampüs içi etkinlikleri kontrol et
-    ETKINLIKLER.kampusIci.forEach(etkinlik => {
+    events_details.kampusIci.forEach(etkinlik => {
         const sonTarih = parseTurkishDate(etkinlik.kayitSon);
         if (sonTarih) {
             if (sonTarih < bugununTarihi) {
@@ -39,20 +39,30 @@ function loadEvents() {
             }
         }
     });
-    
+
     // Kampüs dışı etkinlikleri yükle
     if (kampusDisiSlider) {
         kampusDisiSlider.innerHTML = '';
-        ETKINLIKLER.kampusDisi.forEach((etkinlik, index) => {
+        events_details.kampusDisi.forEach((etkinlik, index) => {
+            let title;
+            let date;
+            if(selector == 1){
+                title = etkinlik.eng;
+                date = etkinlik.tarih_eng;
+            }else if(selector == 0){
+                title = etkinlik.tr;
+                date = etkinlik.tarih;
+            }
+
             const isActive = index === 0 ? 'active' : '';
             const imgUrl = getGoogleDriveImageUrl(etkinlik.resimId);
             
             kampusDisiSlider.innerHTML += `
                 <div class="event-poster ${isActive}" data-index="${index}">
-                    <img src="${imgUrl}" alt="${etkinlik.baslik}">
+                    <img src="${imgUrl}" alt="${title}">
                     <div class="event-overlay">
-                        <h4>${etkinlik.baslik}</h4>
-                        <p>${etkinlik.tarih}</p>
+                        <h4>${title}</h4>
+                        <p>${date}</p>
                     </div>
                 </div>
             `;
@@ -64,16 +74,26 @@ function loadEvents() {
     // Kampüs içi etkinlikleri yükle
     if (kampusIciSlider) {
         kampusIciSlider.innerHTML = '';
-        ETKINLIKLER.kampusIci.forEach((etkinlik, index) => {
+        events_details.kampusIci.forEach((etkinlik, index) => {
+            let title;
+            let date;
+            if(selector == 1){
+                title = etkinlik.eng;
+                date = etkinlik.tarih_eng;
+            }else if(selector == 0){
+                title = etkinlik.tr;
+                date = etkinlik.tarih;
+            }
+
             const isActive = index === 0 ? 'active' : '';
             const imgUrl = getGoogleDriveImageUrl(etkinlik.resimId);
             
             kampusIciSlider.innerHTML += `
                 <div class="event-poster ${isActive}" data-index="${index}">
-                    <img src="${imgUrl}" alt="${etkinlik.baslik}">
+                    <img src="${imgUrl}" alt="${title}">
                     <div class="event-overlay">
-                        <h4>${etkinlik.baslik}</h4>
-                        <p>${etkinlik.tarih}</p>
+                        <h4>${title}</h4>
+                        <p>${date}</p>
                     </div>
                 </div>
             `;
@@ -83,7 +103,7 @@ function loadEvents() {
     }
     
     // Kampüs dışı navigasyon butonlarını etkinleştir
-    if (ETKINLIKLER.kampusDisi.length > 1) {
+    if (events_details.kampusDisi.length > 1) {
         kampusDisiPrevBtn.style.display = 'flex';
         kampusDisiNextBtn.style.display = 'flex';
         
@@ -102,7 +122,7 @@ function loadEvents() {
     }
     
     // Kampüs içi navigasyon butonlarını etkinleştir
-    if (ETKINLIKLER.kampusIci.length > 1) {
+    if (events_details.kampusIci.length > 1) {
         kampusIciPrevBtn.style.display = 'flex';
         kampusIciNextBtn.style.display = 'flex';
         
@@ -129,7 +149,7 @@ function loadEvents() {
         const eventPosters = kampusDisiSlider.querySelectorAll('.event-poster');
         eventPosters.forEach(poster => poster.classList.remove('active'));
         
-        currentKampusDisoEvent = (n + ETKINLIKLER.kampusDisi.length) % ETKINLIKLER.kampusDisi.length;
+        currentKampusDisoEvent = (n + events_details.kampusDisi.length) % events_details.kampusDisi.length;
         eventPosters[currentKampusDisoEvent].classList.add('active');
     }
     
@@ -138,14 +158,14 @@ function loadEvents() {
         const eventPosters = kampusIciSlider.querySelectorAll('.event-poster');
         eventPosters.forEach(poster => poster.classList.remove('active'));
         
-        currentKampusIciEvent = (n + ETKINLIKLER.kampusIci.length) % ETKINLIKLER.kampusIci.length;
+        currentKampusIciEvent = (n + events_details.kampusIci.length) % events_details.kampusIci.length;
         eventPosters[currentKampusIciEvent].classList.add('active');
     }
     
     // Kampüs dışı kayıt butonunu güncelle
     function updateKampusDisButton() {
-        if (ETKINLIKLER.kampusDisi.length > 0) {
-            const currentEvent = ETKINLIKLER.kampusDisi[currentKampusDisoEvent];
+        if (events_details.kampusDisi.length > 0) {
+            const currentEvent = events_details.kampusDisi[currentKampusDisoEvent];
             
             // Kayıt son tarihini tekrar kontrol et
             const bugununTarihi = new Date();
@@ -158,7 +178,7 @@ function loadEvents() {
                                 
             if (currentEvent.kayitAcik) {
                 kampusDisiRegisterBtn.disabled = false;
-                kampusDisiRegisterBtn.textContent = 'Kayıt Ol';
+                kampusDisiRegisterBtn.textContent = register_btn[selector];
                 kampusDisiRegisterBtn.classList.remove('soon-btn');
                 kampusDisiRegisterBtn.classList.add('register-btn');
                 kampusDisiRegisterBtn.onclick = function() {
@@ -166,7 +186,7 @@ function loadEvents() {
                 };
             } else {
                 kampusDisiRegisterBtn.disabled = true;
-                kampusDisiRegisterBtn.textContent = 'Süresi Geçti';
+                kampusDisiRegisterBtn.textContent = late_btn[selector];
                 kampusDisiRegisterBtn.classList.add('soon-btn');
                 kampusDisiRegisterBtn.classList.remove('register-btn');
             }
@@ -175,8 +195,8 @@ function loadEvents() {
     
     // Kampüs içi kayıt butonunu güncelle
     function updateKampusIciButton() {
-        if (ETKINLIKLER.kampusIci.length > 0) {
-            const currentEvent = ETKINLIKLER.kampusIci[currentKampusIciEvent];
+        if (events_details.kampusIci.length > 0) {
+            const currentEvent = events_details.kampusIci[currentKampusIciEvent];
             
             // Kayıt son tarihini tekrar kontrol et
             const bugununTarihi = new Date();
@@ -189,7 +209,7 @@ function loadEvents() {
                                 
             if (currentEvent.kayitAcik) {
                 kampusIciRegisterBtn.disabled = false;
-                kampusIciRegisterBtn.textContent = 'Kayıt Ol';
+                kampusIciRegisterBtn.textContent = register_btn[selector];;
                 kampusIciRegisterBtn.classList.remove('soon-btn');
                 kampusIciRegisterBtn.classList.add('register-btn');
                 kampusIciRegisterBtn.onclick = function() {
@@ -197,7 +217,7 @@ function loadEvents() {
                 };
             } else {
                 kampusIciRegisterBtn.disabled = true;
-                kampusIciRegisterBtn.textContent = 'Süresi Geçti';
+                kampusIciRegisterBtn.textContent = late_btn[selector];
                 kampusIciRegisterBtn.classList.add('soon-btn');
                 kampusIciRegisterBtn.classList.remove('register-btn');
             }

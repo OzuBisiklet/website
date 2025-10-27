@@ -1,20 +1,21 @@
 <html lang="eng"><head>
     <!-- Resim URL'leri Yapılandırması -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="js_eng/data.js"></script>
-    <script src="js_eng/utils.js"></script>
-    <script src="js_eng/slider.js"></script>
-    <script src="js_eng/tours.js"></script>
-    <script src="js_eng/gallery.js"></script>
-    <script src="js_eng/events.js"></script>
-    <script src="js_eng/project.js"></script>
-    <script src="js_eng/mobile.js"></script>
     <script src="js_eng/main.js"></script>
+    <script src="shared/utils.js"></script>
+    <script src="shared/slider.js"></script>
+    <script src="shared/tours.js"></script>
+    <script src="shared/gallery.js"></script>
+    <script src="shared/events.js"></script>
+    <script src="shared/project.js"></script>
+    <script src="shared/mobile.js"></script>
+    <script src="shared/dictionary.js"></script>
+    <script src="shared/data.js"></script>
 
     <!-- Google Drive Linkleri Yapılandırması Bitiş -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Özyeğin Üniversitesi Bisiklet Kulübü</title>
+    <title>Ozyegin University Bicycle Club</title>
     <link rel="icon" type="image/png" href="images/logo.png">
 
     
@@ -26,25 +27,25 @@
                 <div class="logo-section">
                     <img src="images/logo.png" alt="Bisiklet Kulübü Logo" class="logo">
                     <div class="club-name">
-                        <span>Ozyegin University</span>
-                        <span>Cycling Club</span>
+                        <span>club_name[2]</span>
+                        <span>club_name[3]</span>
                     </div>
                 </div>
                 <nav class="nav-menu">
-                    <a href="#top" class="nav-item active">Main Page</a>
-                    <a href="#events" class="nav-item">Upcoming Activities</a>
-                    <a href="#tours" class="nav-item">Our Tours</a>
-                    <a href="#project" class="nav-item">Our Big Project</a>
-                    <a href="#join" class="nav-item">Join Us</a>
-                    <a href="#gallery" class="nav-item">Gallery</a>
-                    <a href="#footer" class="nav-item">Contact Us</a>
-                    <a href="Sponsorluk Dosyası.pdf" download class="nav-item" style="background-color: #00a884; color: white; border-radius: 8px; padding: 0.6rem 1.2rem; margin: 0.5rem auto; max-width: 150px;">Sponsorship</a>
+                    <a href="#top" class="nav-item active">nav_menu_eng[0]</a>
+                    <a href="#events" class="nav-item">nav_menu_eng[1]</a>
+                    <a href="#tours" class="nav-item">nav_menu_eng[2]</a>
+                    <a href="#project" class="nav-item">nav_menu_eng[3]</a>
+                    <a href="#join" class="nav-item">nav_menu_eng[4]</a>
+                    <a href="#gallery" class="nav-item">nav_menu_eng[5]</a>
+                    <a href="#footer" class="nav-item">nav_menu_eng[6]</a>
+                    <a href="Sponsorluk Dosyası.pdf" download class="nav-item" style="background-color: #00a884; color: white; border-radius: 8px; padding: 0.6rem 1.2rem; margin: 0.5rem auto; max-width: 150px;">nav_menu_eng[7]</a>
                     <a href="index.html" class="lang-btn-header" style="flex-direction: column; position: absolute; top: 22px; right: 10px; font-size: 0.9rem; margin-left: 0rem; display: flex; align-items: center; justify-content: right; width: 40px; height: 40px; min-width: 28px; text-decoration: none;">
                         <img src="https://flagcdn.com/tr.svg" alt="English" style="width: 100%; height: auto;" />
                         <span>TR</span>
                     </a>
                 </nav>
-                <a href="Sponsorluk Dosyası.pdf" download class="about-btn" style="background-color: #00a884; color: white;">Sponsorship</a>
+                <a href="Sponsorluk Dosyası.pdf" download class="about-btn" style="background-color: #00a884; color: white;">nav_menu_eng[7]</a>
                 
                 <button class="menu-btn">Menu</button>
             </div>
@@ -59,10 +60,10 @@
             </div>
             <div class="slide-overlay" id="slider-overlay">
                 <div class="slide-content">
-                    <h1 class="slide-title">Who Are We?</h1>
+                    <h1 class="slide-title">slider_title[1]</h1>
                     <button class="discover-btn" data-text-default="Discover" data-text-active="Hide">Discover</button>
                     <div class="about-content">
-                        <p>As Ozyegin University Bicycle Club, we feel freedom and solidarity wherever pedals return! While we bring together tours, sports and entertainment in nature and the city, we encourage sustainability and water awareness, and at the same time, we aim to spread the culture of cycling. Join us to explore new places, lead a healthy life and establish good friendships! 🚴‍♂️🌿</p>
+                        <p>about_content[1]</p>
                     </div>
                 </div>
             </div>
@@ -79,39 +80,25 @@
             <div class="bike">🚴‍♀️</div>
         </div>
 
-        <h2 class="tour-slider-title" id="events" style="margin-top: 0rem;">Upcoming Activities</h2>
+        <h2 class="tour-slider-title" id="events" style="margin-top: 0rem;">events_title[1]</h2>
         <div class="events-container">
             <div class="event-section kampus-disi">
                 <h3 class="event-title"></h3>
                 <div class="event-slider">
-                        <div class="event-poster active" data-index="0">
-                            <img src="https://drive.google.com/thumbnail?id=1dnqlHRjJfyzPrp5n6Hc8zR5cyX9djv-Q&amp;sz=w1000" alt="Çanakkale Turu">
-                            <div class="event-overlay">
-                                <h4>Çanakkale Turu</h4>
-                                <p>15 Nisan 2024</p>
-                            </div>
-                        </div>
                     </div>
                 <div class="event-navigation">
                     <button class="event-nav-btn prev-event kampus-disi-prev" style="display:none;">❮</button>
-                    <button class="event-btn register-btn active-event-btn">Register</button>
+                    <button class="event-btn register-btn active-event-btn">register_btn[1]</button>
                     <button class="event-nav-btn next-event kampus-disi-next" style="display:none;">❯</button>
                 </div>
             </div>
             <div class="event-section kampus-ici">
                 <h3 class="event-title"></h3>
                 <div class="event-slider">
-                        <div class="event-poster active" data-index="0">
-                            <img src="https://drive.google.com/thumbnail?id=17NMSmh80mbrNh4tUFgO4iW9fIWwDHcv5&amp;sz=w1000" alt="Bisiklet 101">
-                            <div class="event-overlay">
-                                <h4>Bisiklet 101</h4>
-                                <p>1 Mayıs 2024</p>
-                            </div>
-                        </div>
                     </div>
                 <div class="event-navigation">
                     <button class="event-nav-btn prev-event kampus-ici-prev" style="display:none;">❮</button>
-                    <button class="event-btn soon-btn active-event-btn" disabled="">Soon</button>
+                    <button class="event-btn soon-btn active-event-btn" disabled="">soon_btn[1]</button>
                     <button class="event-nav-btn next-event kampus-ici-next" style="display:none;">❯</button>
                 </div>
             </div>
@@ -120,18 +107,18 @@
 
         <div class="scrolling-text-container">
             <div class="scrolling-text">
-                <span class="text-aqua">#ozubisiklet</span>
-                <span class="text-turquoise">Pedal To Life!</span>
-                <span class="text-aqua">Water Is Life</span>
-                <span class="text-turquoise">Let's Pedal !</span>
-                <span class="text-aqua">#ozubisiklet</span>
-                <span class="text-turquoise">Pedal To Life!</span>
-                <span class="text-aqua">Water Is Life</span>
-                <span class="text-turquoise">Let's Pedal !</span>
+                <span class="text-aqua">scrolling_text[4]</span>
+                <span class="text-turquoise">scrolling_text[5]</span>
+                <span class="text-aqua">scrolling_text[6]</span>
+                <span class="text-turquoise">scrolling_text[7]</span>
+                <span class="text-aqua">scrolling_text[4]</span>
+                <span class="text-turquoise">scrolling_text[5]</span>
+                <span class="text-aqua">scrolling_text[6]</span>
+                <span class="text-turquoise">scrolling_text[7]</span>
             </div>
         </div>
 
-        <h2 class="tour-slider-title" id="tours">Our Tours</h2>
+        <h2 class="tour-slider-title" id="tours">tours_title[1]</h2>
         <div class="tour-slider-container">
             <div class="tour-slider-wrapper">
                 <div class="tour-slider">
@@ -188,61 +175,61 @@
                         <div class="tour-description active">
                             <div class="tour-header">
                                 <button class="tour-nav-btn prev-tour">❮</button>
-                                <h3>Büyükada Turu</h3>
+                                <h3>GOOGLE_DRIVE_LINKLERI_ENG[0].isim</h3>
                                 <button class="tour-nav-btn next-tour">❯</button>
                             </div>
-                            <p>Adalar'ın en büyüğü olan Büyükada'da, tarihi köşkler ve çam ormanları arasında keyifli bir tura ne dersin? Aya Yorgi'ye tırmanırken biraz terleyeceğiz ama manzara görmeye değecek! Dönüşte ada sokakları arasında kaybolup, dondurmamızı da yiyeceğiz. Sen de bizimle gel, bu güzel adayı birlikte keşfedelim! 🚲🌲</p>
+                            <p>GOOGLE_DRIVE_LINKLERI_ENG[0].aciklama</p>
                         </div>
                     
                         <div class="tour-description ">
                             <div class="tour-header">
                                 <button class="tour-nav-btn prev-tour">❮</button>
-                                <h3>Heybeliada Turu</h3>
+                                <h3>GOOGLE_DRIVE_LINKLERI_ENG[1].isim</h3>
                                 <button class="tour-nav-btn next-tour">❯</button>
                             </div>
-                            <p>Heybeliada'nın eşsiz manzarasında, doğa ve tarihin buluştuğu rotalarda pedal çevirmeye hazır mısın? Çam kokulu yollarda ilerlerken Ruhban Okulu'nu ziyaret edecek, tepeden İstanbul manzarasını seyredip kahvelerimizi yudumlayacağız. Hadi sen de katıl, bu keyifli maceraya ortak ol! ⛰️🌅</p>
+                            <p>GOOGLE_DRIVE_LINKLERI_ENG[1].aciklama</p>
                         </div>
                     
                         <div class="tour-description ">
                             <div class="tour-header">
                                 <button class="tour-nav-btn prev-tour">❮</button>
-                                <h3>Bostancı-Maltepe Sahil Turu</h3>
+                                <h3>GOOGLE_DRIVE_LINKLERI_ENG[2].isim</h3>
                                 <button class="tour-nav-btn next-tour">❯</button>
                             </div>
-                            <p>Deniz kenarında ferah bir sürüş deneyimine var mısın? Bostancı'dan Maltepe'ye uzanan sahil şeridinde, martıların eşliğinde pedal çevireceğiz. Yol boyunca mola verip çayımızı içecek, sohbet edecek, deniz havasının tadını çıkaracağız. Bisikletini kap da gel, birlikte sürelim! 🌊☕</p>
+                            <p>GOOGLE_DRIVE_LINKLERI_ENG[2].aciklama</p>
                         </div>
                     
                         <div class="tour-description ">
                             <div class="tour-header">
                                 <button class="tour-nav-btn prev-tour">❮</button>
-                                <h3>Anadolu Kavağı Turu</h3>
+                                <h3>GOOGLE_DRIVE_LINKLERI_ENG[3].isim</h3>
                                 <button class="tour-nav-btn next-tour">❯</button>
                             </div>
-                            <p>Boğaz'ın kuzeyine doğru keyifli bir yolculuğa çıkıyoruz! Sahil boyunca ilerlerken tarihi yalıları selamlayacak, balıkçı teknelerinin arasından geçeceğiz. Anadolu Kavağı'nda meşhur balık ekmeklerimizi yiyip, çaylarımızı da içeceğiz. Bu güzel rotada bize katılmak ister misin? 🐟🚴‍♂️</p>
+                            <p>GOOGLE_DRIVE_LINKLERI_ENG[3].aciklama</p>
                         </div>
                     
                         <div class="tour-description ">
                             <div class="tour-header">
                                 <button class="tour-nav-btn prev-tour">❮</button>
-                                <h3>Beykoz Spor Ormanı Turu</h3>
+                                <h3>GOOGLE_DRIVE_LINKLERI_ENG[4].isim</h3>
                                 <button class="tour-nav-btn next-tour">❯</button>
                             </div>
-                            <p>Şehrin gürültüsünden uzaklaşıp doğanın kalbine yolculuk yapmaya ne dersin? Beykoz'un yemyeşil ormanlarında, kuş sesleri eşliğinde pedal çevireceğiz. Parkurlarda biraz zorlansak da, molalarda sohbet edip enerjimizi toplayacağız. Doğa ile baş başa bu güzel maceraya sen de katıl! 🌳💚</p>
+                            <p>GOOGLE_DRIVE_LINKLERI_ENG[4].aciklama</p>
                         </div>
                     
                         <div class="tour-description ">
                             <div class="tour-header">
                                 <button class="tour-nav-btn prev-tour">❮</button>
-                                <h3>Boğaz Turu</h3>
+                                <h3>GOOGLE_DRIVE_LINKLERI_ENG[5].isim</h3>
                                 <button class="tour-nav-btn next-tour">❯</button>
                             </div>
-                            <p>İstanbul Boğazı'nın eşsiz manzarası eşliğinde unutulmaz bir tura hazır ol! Tarihi yalılar, köprüler ve deniz manzarası eşliğinde pedal çevirirken, en güzel fotoğraf noktalarında mola vereceğiz. Boğaz'ın iki yakasını birlikte keşfedip, günbatımında çaylarımızı yudumlayacağız. Bu keyifli turda sen de aramızda ol! 🌅🌉</p>
+                            <p>GOOGLE_DRIVE_LINKLERI_ENG[5].aciklama</p>
                         </div>
                     </div>
         </div>
 
         <section class="project-section" id="project">
-            <h2 class="project-heading">Pedaling In Disappearing Waters</h2>
+            <h2 class="project-heading">project_title[1]</h2>
             <div class="project-container">
                 <div class="project-slider">
                     <!-- Resimler JavaScript ile PEDALLAYA_PEDALLAYA dizisinden yüklenecek -->
@@ -252,8 +239,7 @@
                     </div>
                 </div>
                 <div class="project-content">
-                    <p>Our project, which we have realized in our club values ​​based on sustainability and environmental consciousness issues and has a special place in our history, is the journey of awareness that we realized around the seven lakes in the Mediterranean Region in July 2023. This meaningful tour, which we completed with 12 members to draw attention to the drought problem, was transformed into a documentary by Metin Çavuş, a faculty member of Özyeğin University.
-                        In October 2024, our documentary met with a broad audience at the 212 Photography Festival and was supported by a panel on sustainability and water consciousness. This project has aroused a great impact not only in our university, but also in a large environment -sensitive community.</p>
+                    <p>project_content[1]</p>
                     <a href="https://www.imdb.com/title/tt33598444/?ref_=nm_flmg_job_1_cred_t_1" target="_blank" class="discover-more-btn">Go To IMDB Page</a>
                 </div>
             </div>
@@ -265,16 +251,21 @@
                 <div class="join-overlay"></div>
             </div>
             <div class="join-content">
-                <h2>Come And Join Us</h2>
-                <button class="join-btn">Join Us</button>
+                <h2>join_title[1]</h2>
+                <button class="join-btn">join_btn[1]</button>
             </div>
         </div>
 
+        <!-- Filtre Butonu Düzenleme  -->
+
         <div class="gallery-container" id="gallery">
-            <h2 class="gallery-title">Gallery</h2>
+            <h2 class="gallery-title">gallery_title[1]</h2>
             <div class="gallery-filter">
                 <div class="filter-row">
-                    <button class="filter-btn active" data-filter="all" style="">Highlights</button>
+                    <button class="filter-btn active" data-filter="all" style="">filter_btn[1]</button>
+                </div>
+                <div class="filter-row">
+                    <button class="filter-btn" data-filter="2025-2026">2025 - 2026</button>
                 </div>
                 <div class="filter-row">
                     <button class="filter-btn" data-filter="2024-2025">2024 - 2025</button>
@@ -285,31 +276,51 @@
                     <button class="filter-btn" data-filter="2021-2022">2021 - 2022</button>
                 </div>
                 <div class="filter-row">
-                    <button class="filter-btn view-all">View All</button>
+                    <button class="filter-btn view-all">view_all_btn[1]</button>
                 </div>
             </div>
+
+            <!-- 9'luk Karo Highlight  -->
+
+
             <div class="gallery-grid" style="gap: 15px;">
+                <div class="gallery-item" data-category="2025-2026">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="https://drive.google.com/thumbnail?id=1pMWqiJkFwj3hdcQoMHtjVrtbO601KMyr&amp;sz=w1000" alt="Bisiklet Turu 2" id="gallery-img-2025-2026-1">
+                            <div class="gallery-hover" id="gallery-title-2025-2026-1">GALERI_RESIMLERI[0].[1].baslik</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="2025-2026">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="https://drive.google.com/thumbnail?id=1xX6BplKI5tAkUznjcPFy2H15ZL6Hg4tR&amp;sz=w1000" alt="Bisiklet Turu 6" id="gallery-img-2025-2026-2">
+                            <div class="gallery-hover" id="gallery-title-2025-2026-2">GALERI_RESIMLERI[1].[2].baslik</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="2025-2026">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="https://drive.google.com/thumbnail?id=1TXY0Sj2NaB6L58wKfuF-p-Q0l8Kls2E6&amp;sz=w1000" alt="Bisiklet Turu 8" id="gallery-img-2025-2026-3">
+                            <div class="gallery-hover" id="gallery-title-2025-2026-3">GALERI_RESIMLERI[2].[1].baslik</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="2025-2026">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="https://drive.google.com/thumbnail?id=1zGgkQ3Xc4BYK6KZc7_uaa5Z74BUEl3Ou&amp;sz=w1000" alt="Bisiklet Turu 3" id="gallery-img-2025-2026-4">
+                            <div class="gallery-hover" id="gallery-title-2025-2026-4">GALERI_RESIMLERI[0].[2].baslik</div>
+                        </div>
+                    </div>
+                </div>
                 <div class="gallery-item" data-category="2024-2025">
                     <div class="gallery-card">
                         <div class="gallery-image">
                             <img src="https://drive.google.com/thumbnail?id=166oejG-IFIxAnpbKzyBs9dFyI_oO0EqS&amp;sz=w1000" alt="Bisiklet Turu 1" id="gallery-img-2024-2025-1">
-                            <div class="gallery-hover" id="gallery-title-2024-2025-1">Büyükada Turu</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="2024-2025">
-                    <div class="gallery-card">
-                        <div class="gallery-image">
-                            <img src="https://drive.google.com/thumbnail?id=1pMWqiJkFwj3hdcQoMHtjVrtbO601KMyr&amp;sz=w1000" alt="Bisiklet Turu 2" id="gallery-img-2024-2025-2">
-                            <div class="gallery-hover" id="gallery-title-2024-2025-2">Heybeliada Turu</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="2024-2025">
-                    <div class="gallery-card">
-                        <div class="gallery-image">
-                            <img src="https://drive.google.com/thumbnail?id=1zGgkQ3Xc4BYK6KZc7_uaa5Z74BUEl3Ou&amp;sz=w1000" alt="Bisiklet Turu 3" id="gallery-img-2024-2025-3">
-                            <div class="gallery-hover" id="gallery-title-2024-2025-3">Bostancı Turu</div>
+                            <div class="gallery-hover" id="gallery-title-2024-2025-1">GALERI_RESIMLERI[0].[0].baslik</div>
                         </div>
                     </div>
                 </div>
@@ -317,23 +328,15 @@
                     <div class="gallery-card">
                         <div class="gallery-image">
                             <img src="https://drive.google.com/thumbnail?id=1YS4yVnCzwirJUSPak4fsAIj5Ah1s80QF&amp;sz=w1000" alt="Bisiklet Turu 4" id="gallery-img-2023-2024-1">
-                            <div class="gallery-hover" id="gallery-title-2023-2024-1">Anadolu Kavağı Turu</div>
+                            <div class="gallery-hover" id="gallery-title-2023-2024-1">GALERI_RESIMLERI[1].[0].baslik</div>
                         </div>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="2023-2024">
                     <div class="gallery-card">
                         <div class="gallery-image">
-                            <img src="https://drive.google.com/thumbnail?id=1eu3WW1Fx3F62_ZG_CCtgKv8vUm0mL7Iw&amp;sz=w1000" alt="Bisiklet Turu 5" id="gallery-img-2023-2024-2">
-                            <div class="gallery-hover" id="gallery-title-2023-2024-2">Beykoz Turu</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="2023-2024">
-                    <div class="gallery-card">
-                        <div class="gallery-image">
-                            <img src="https://drive.google.com/thumbnail?id=1xX6BplKI5tAkUznjcPFy2H15ZL6Hg4tR&amp;sz=w1000" alt="Bisiklet Turu 6" id="gallery-img-2023-2024-3">
-                            <div class="gallery-hover" id="gallery-title-2023-2024-3">Boğaz Turu</div>
+                            <img src="https://drive.google.com/thumbnail?id=166oejG-IFIxAnpbKzyBs9dFyI_oO0EqS&amp;sz=w1000" alt="Bisiklet Turu 1" id="gallery-img-2023-2024-2">
+                            <div class="gallery-hover" id="gallery-title-2023-2024-2">GALERI_RESIMLERI[0].[0].baslik</div>
                         </div>
                     </div>
                 </div>
@@ -341,15 +344,7 @@
                     <div class="gallery-card">
                         <div class="gallery-image">
                             <img src="https://drive.google.com/thumbnail?id=1oOfgv3VLpbopdbUbCbH_QIQ4I1Jb87ls&amp;sz=w1000" alt="Bisiklet Turu 7" id="gallery-img-2022-2023-1">
-                            <div class="gallery-hover" id="gallery-title-2022-2023-1">Büyükada Turu</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="2022-2023">
-                    <div class="gallery-card">
-                        <div class="gallery-image">
-                            <img src="https://drive.google.com/thumbnail?id=1TXY0Sj2NaB6L58wKfuF-p-Q0l8Kls2E6&amp;sz=w1000" alt="Bisiklet Turu 8" id="gallery-img-2022-2023-2">
-                            <div class="gallery-hover" id="gallery-title-2022-2023-2">Heybeliada Turu</div>
+                            <div class="gallery-hover" id="gallery-title-2022-2023-1">GALERI_RESIMLERI[2].[0].baslik</div>
                         </div>
                     </div>
                 </div>
@@ -357,17 +352,20 @@
                     <div class="gallery-card">
                         <div class="gallery-image">
                             <img src="https://drive.google.com/thumbnail?id=1-oDa84EPosZZrDYUTx8zFKGI1hTNnz2b&amp;sz=w1000" alt="Bisiklet Turu 9" id="gallery-img-2021-2022-1">
-                            <div class="gallery-hover" id="gallery-title-2021-2022-1">Bostancı Turu</div>
+                            <div class="gallery-hover" id="gallery-title-2021-2022-1">GALERI_RESIMLERI[3].[0].baslik</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+        
     </div>
 
     <footer class="footer" id="footer">
         <div class="container">
-            <h2 class="footer-title">Contact Us</h2>
+            <h2 class="footer-title">contact_title[1]</h2>
             <div class="footer-content">
                 <div class="social-links-row">
                     <a href="https://www.instagram.com/ozubisiklet" class="social-link">
@@ -393,5 +391,18 @@
             <img src="images/hayata_pedal_çevir.png" alt="Hayata Pedal Çevir" class="footer-image">
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll("body *").forEach(el => {
+          if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+            const text = el.textContent.trim();
+            if (text.match(/^[A-Za-z_]+\[[0-9]+\]$/)) {
+              try {
+                el.textContent = eval(text);
+              } catch (e) {}
+            }
+          }
+        });
+        </script>
 
  </body></html>
